@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqlh2sv5h4uer"]
+
+[ext_resource type="Script" uid="uid://be10rb1te3on5" path="res://tools/build_root.gd" id="1_xirba"]
+[ext_resource type="Resource" uid="uid://cj3n23yur4ici" path="res://tools/build_root.tres" id="2_7oqkc"]
+
+[node name="BuildRoot" type="Node2D"]
+script = ExtResource("1_xirba")
+root = ExtResource("2_7oqkc")

@@ -1,0 +1,391 @@
+[gd_scene load_steps=24 format=3 uid="uid://bh5a8nfptduvn"]
+
+[ext_resource type="Script" uid="uid://bhtowowk28hot" path="res://world/world.gd" id="1_gbfbk"]
+[ext_resource type="Script" uid="uid://b7b1rokvjjkxa" path="res://world/world_boundary.gd" id="2_j34ew"]
+[ext_resource type="Script" uid="uid://d1fu52ksieu1q" path="res://world/gui.gd" id="2_m0cxt"]
+[ext_resource type="PackedScene" uid="uid://dsohp8dyryit5" path="res://tools/monitors.tscn" id="6_dwbse"]
+[ext_resource type="Texture2D" uid="uid://6dsbnt67vxf6" path="res://assets/bg.png" id="8_gbfbk"]
+[ext_resource type="Script" uid="uid://csufdhtl0phrc" path="res://navigation/nv_mng.gd" id="9_ioo17"]
+[ext_resource type="Script" uid="uid://c5f38g6balg8x" path="res://navigation/nav_road_reg.gd" id="10_k3n1d"]
+[ext_resource type="Script" uid="uid://bt1pck26j0wq5" path="res://navigation/nav_road_seg.gd" id="10_wse8f"]
+[ext_resource type="Script" uid="uid://dt4c3jwdcef35" path="res://navigation/nav_hub.gd" id="11_k3n1d"]
+[ext_resource type="Script" uid="uid://dlldfj851l08h" path="res://world/team.gd" id="12_k3n1d"]
+[ext_resource type="Resource" uid="uid://qriqrm6sdhaq" path="res://game_assets/build_data/archer_barrack/archer_barrack.tres" id="14_aysyn"]
+[ext_resource type="Texture2D" uid="uid://diwp5la6l8tlw" path="res://assets/hom.png" id="15_p2iis"]
+[ext_resource type="Script" uid="uid://d3nqemhglb41g" path="res://spawner/selfcaster_spawner.gd" id="15_ysn08"]
+[ext_resource type="PackedScene" uid="uid://b8knddk6bjqkm" path="res://world/VFX/text.tscn" id="16_h8lre"]
+[ext_resource type="PackedScene" uid="uid://cv6i8iu8vsoq1" path="res://game_assets/build_data/barrack/Barrack.tscn" id="17_aysyn"]
+[ext_resource type="Script" uid="uid://5x63fvohgg3k" path="res://world/fx_mng.gd" id="17_ysn08"]
+[ext_resource type="Resource" uid="uid://dglr37jf73fxk" path="res://game_assets/build_data/barrack/barrack.tres" id="18_o1net"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_m0cxt"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j34ew"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p2iis"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_aysyn"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_dqqhb"]
+vertices = PackedVector2Array(1846.2422, 343.29688, 1920, 0, 1920, 1080, 1839.7578, 378.70313, 414.4297, 745.3047, 491.75, 730.7031, 473.60938, 818.5, 455.03125, 894.5625, 377.1875, 946.16406, 476.9375, 678.46094, 478.21094, 682.375, 423.5703, 692.6953, 385.65625, 670.4375, 1661.7109, 309.4922, 1628, 285, 0, 0, 1424.75, 257.7578, 898.40625, 730.66406, 995.3672, 740.58594, 995.3672, 748.5, 1665.0234, 351.95313, 1666.6328, 346.9922, 1690.3203, 394.76563, 1680.0391, 464.64063, 1589.5391, 347.53906, 1591.5, 353.5703, 1524.2422, 385.82813, 1499.6094, 333.375, 522.3906, 829.5, 539.7422, 745.53906, 546.5078, 745.53906, 582.2422, 787.3594, 605.5781, 820.41406, 498.96875, 925.4375, 997.28125, 877.0469, 1674.6875, 460.75, 1665.5078, 509.35938, 1090.6328, 748.5, 1090.6328, 728.9375, 1125.1719, 714, 1238.8594, 714, 1654.125, 509.35938, 1582.6328, 610.7969, 1526.125, 637.4531, 1392.5781, 740.5, 621.7578, 756.6406, 581.1172, 709.0781, 582.77344, 703.97656, 638.8125, 692.91406, 739.27344, 731.08594, 646.4219, 791.58594, 1060.0469, 833.22656, 1059.2813, 766.60156, 1539.7578, 418.17188, 1628.8203, 375.45313, 1632.4453, 375.45313, 1647.6797, 401.23438, 1638.6328, 439.4453, 1603.9609, 464.64063, 1029.2969, 768.08594, 1029.9531, 824.78125, 1114.8281, 664, 1071.7813, 682.6172, 1043, 666, 1409.25, 290.2422, 1610.4297, 484.5625, 1549.3672, 571.2031, 1499.875, 594.5469, 1243.1406, 664, 360.34375, 713.5625, 0, 1080, 1379.4219, 687.5, 643.1875, 641.08594, 561.75, 657.15625, 534, 637, 1591.6328, 311.42188, 1510.3906, 298.625, 1022.71875, 892.9531, 404.8125, 987.83594, 825.5469, 710.78906, 1000.03906, 690.8047, 907.59375, 681.33594, 826.4531, 659.21094, 742.72656, 678.91406)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8), PackedInt32Array(9, 10, 11, 12), PackedInt32Array(1, 0, 13, 14), PackedInt32Array(15, 1, 14, 16), PackedInt32Array(17, 18, 19), PackedInt32Array(20, 21, 3, 22), PackedInt32Array(22, 3, 2, 23), PackedInt32Array(24, 25, 26, 27), PackedInt32Array(28, 29, 30, 31, 32), PackedInt32Array(33, 28, 32, 34), PackedInt32Array(23, 35, 22), PackedInt32Array(36, 23, 2), PackedInt32Array(37, 38, 39, 40), PackedInt32Array(41, 36, 2, 42), PackedInt32Array(43, 42, 2, 44), PackedInt32Array(45, 46, 47, 48, 49), PackedInt32Array(50, 45, 49, 34), PackedInt32Array(51, 52, 37, 40, 44, 2), PackedInt32Array(53, 54, 55, 56, 57, 58), PackedInt32Array(19, 59, 60, 34, 17), PackedInt32Array(61, 62, 63, 64), PackedInt32Array(53, 58, 65, 66, 67, 68), PackedInt32Array(69, 4, 8, 70), PackedInt32Array(67, 71, 68), PackedInt32Array(26, 53, 68), PackedInt32Array(64, 27, 26, 68, 61), PackedInt32Array(72, 73, 74, 15, 16, 64), PackedInt32Array(14, 75, 76, 16), PackedInt32Array(77, 51, 2), PackedInt32Array(77, 2, 70), PackedInt32Array(34, 77, 70, 78), PackedInt32Array(74, 9, 12, 15), PackedInt32Array(79, 17, 34, 49), PackedInt32Array(32, 50, 34), PackedInt32Array(64, 63, 80, 81, 82), PackedInt32Array(82, 83, 72, 64), PackedInt32Array(70, 15, 12, 69), PackedInt32Array(70, 8, 78), PackedInt32Array(34, 78, 33)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 0, 0, 1080, 1920, 1080, 1920, 0)])
+agent_radius = 0.0
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_mad0u"]
+vertices = PackedVector2Array(1060.0469, 833.22656, 1022.71875, 892.9531, 997.28125, 877.0469, 1029.9531, 824.78125, 1059.2813, 766.60156, 1029.2969, 768.08594, 1628.8203, 375.45313, 1539.7578, 418.17188, 1524.2422, 385.82813, 1591.5, 353.5703, 1665.0234, 351.95313, 360.34375, 713.5625, 385.65625, 670.4375, 423.5703, 692.6953, 414.4297, 745.3047, 491.75, 730.7031, 478.21094, 682.375, 1499.6094, 333.375, 1409.25, 290.2422, 1424.75, 257.7578, 1510.3906, 298.625, 1589.5391, 347.53906, 1591.6328, 311.42188, 1846.2422, 343.29688, 1839.7578, 378.70313, 1666.6328, 346.9922, 1661.7109, 309.4922, 404.8125, 987.83594, 377.1875, 946.16406, 455.03125, 894.5625, 498.96875, 925.4375, 522.3906, 829.5, 473.60938, 818.5, 539.7422, 745.53906, 561.75, 657.15625, 621.7578, 756.6406, 646.4219, 791.58594, 605.5781, 820.41406, 582.2422, 787.3594, 581.1172, 709.0781, 546.5078, 745.53906, 476.9375, 678.46094, 534, 637, 582.77344, 703.97656, 643.1875, 641.08594, 638.8125, 692.91406, 739.27344, 731.08594, 742.72656, 678.91406, 825.5469, 710.78906, 898.40625, 730.66406, 826.4531, 659.21094, 907.59375, 681.33594, 995.3672, 740.58594, 1000.03906, 690.8047, 1628, 285, 1632.4453, 375.45313, 1690.3203, 394.76563, 1647.6797, 401.23438, 1638.6328, 439.4453, 1674.6875, 460.75, 1654.125, 509.35938, 1680.0391, 464.64063, 1665.5078, 509.35938, 1603.9609, 464.64063, 1610.4297, 484.5625, 1549.3672, 571.2031, 1582.6328, 610.7969, 1526.125, 637.4531, 1379.4219, 687.5, 1499.875, 594.5469, 1392.5781, 740.5, 1243.1406, 664, 1238.8594, 714, 1114.8281, 664, 1125.1719, 714, 1071.7813, 682.6172, 1090.6328, 728.9375, 1043, 666, 995.3672, 748.5, 1090.6328, 748.5)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5), PackedInt32Array(6, 7, 8, 9, 10), PackedInt32Array(11, 12, 13, 14), PackedInt32Array(15, 14, 13, 16), PackedInt32Array(17, 18, 19, 20, 21), PackedInt32Array(21, 20, 22), PackedInt32Array(23, 24, 25, 26), PackedInt32Array(27, 28, 29, 30), PackedInt32Array(31, 30, 29, 32, 33), PackedInt32Array(33, 32, 15, 34), PackedInt32Array(35, 36, 37, 38, 39), PackedInt32Array(39, 38, 40, 34), PackedInt32Array(16, 41, 42, 34), PackedInt32Array(15, 16, 34), PackedInt32Array(40, 33, 34), PackedInt32Array(43, 39, 34), PackedInt32Array(43, 34, 44, 45), PackedInt32Array(46, 45, 44, 47, 48), PackedInt32Array(49, 48, 47, 50, 51, 52), PackedInt32Array(52, 51, 53), PackedInt32Array(21, 22, 54, 26, 25, 10, 9), PackedInt32Array(55, 6, 10), PackedInt32Array(55, 10, 56, 57), PackedInt32Array(58, 57, 56, 59, 60), PackedInt32Array(61, 62, 60, 59), PackedInt32Array(63, 58, 60, 64), PackedInt32Array(65, 64, 60, 66, 67), PackedInt32Array(68, 69, 65, 67, 70), PackedInt32Array(71, 68, 70, 72, 73), PackedInt32Array(73, 72, 74, 75), PackedInt32Array(75, 74, 76, 52, 53, 77), PackedInt32Array(4, 5, 78, 52, 76, 79)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1510.3884, 298.62674, 1591.6342, 311.42133, 1628, 285, 1661.7141, 309.4947, 1846.243, 343.29456, 1839.757, 378.70544, 1666.6351, 346.995, 1665.0231, 351.9563, 1690.3193, 394.76532, 1674.6912, 460.7515, 1680.0422, 464.6393, 1665.5114, 509.3607, 1654.1212, 509.3607, 1582.6335, 610.79565, 1526.1223, 637.4519, 1392.5768, 740.5028, 1238.8606, 714, 1125.1738, 714, 1090.6313, 728.9373, 1090.6313, 748.5, 1059.2837, 766.5986, 1060.0496, 833.22266, 1022.72, 892.94995, 997.28, 877.05005, 1029.9504, 824.77734, 1029.2988, 768.08966, 995.3686, 748.5, 995.3686, 740.5857, 898.4072, 730.6605, 825.5466, 710.7894, 739.2749, 731.0886, 638.81445, 692.91364, 582.7729, 703.9745, 581.11475, 709.0777, 621.7572, 756.638, 646.4242, 791.5829, 605.5758, 820.4171, 582.2428, 787.362, 546.5048, 745.541, 539.7386, 745.541, 522.39246, 829.4962, 498.96582, 925.4339, 404.81152, 987.8385, 377.18848, 946.1615, 455.03418, 894.5661, 473.60754, 818.5038, 491.74866, 730.7007, 414.42917, 745.3055, 360.34497, 713.5604, 385.65503, 670.4396, 423.57083, 692.6945, 478.20868, 682.374, 476.9366, 678.459, 534, 637, 561.74744, 657.15967, 643.18555, 641.08636, 742.7251, 678.9114, 826.4534, 659.2106, 907.5928, 681.3395, 1000.0405, 690.8026, 1043, 666, 1071.7784, 682.61523, 1114.8262, 664, 1243.1394, 664, 1379.4232, 687.4972, 1499.8777, 594.5481, 1549.3665, 571.20435, 1610.4302, 484.55963, 1603.9578, 464.6393, 1638.63, 439.4485, 1647.6807, 401.23468, 1632.4448, 375.45087, 1628.8164, 375.45087, 1539.7573, 418.16882, 1524.2427, 385.83105, 1591.5012, 353.56992, 1589.5404, 347.53528, 1499.6116, 333.37326, 1409.2468, 290.24466, 1424.7532, 257.75534)])
+agent_radius = 0.0
+
+[node name="World" type="Node2D" node_paths=PackedStringArray("teams")]
+script = ExtResource("1_gbfbk")
+teams = {
+0: NodePath("TeamRed"),
+1: NodePath("TeamBlue")
+}
+
+[node name="WorldBoundary" type="Node2D" parent="."]
+script = ExtResource("2_j34ew")
+metadata/_edit_lock_ = true
+
+[node name="Top" type="StaticBody2D" parent="WorldBoundary"]
+position = Vector2(0, 15)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundary/Top"]
+shape = SubResource("WorldBoundaryShape2D_m0cxt")
+
+[node name="Bottom" type="StaticBody2D" parent="WorldBoundary"]
+position = Vector2(2929, 1884)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundary/Bottom"]
+shape = SubResource("WorldBoundaryShape2D_j34ew")
+
+[node name="Left" type="StaticBody2D" parent="WorldBoundary"]
+position = Vector2(15, 0)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundary/Left"]
+shape = SubResource("WorldBoundaryShape2D_p2iis")
+
+[node name="Right" type="StaticBody2D" parent="WorldBoundary"]
+position = Vector2(2914, 1899)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundary/Right"]
+shape = SubResource("WorldBoundaryShape2D_aysyn")
+
+[node name="BG" type="Sprite2D" parent="WorldBoundary"]
+z_index = -1
+texture = ExtResource("8_gbfbk")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="GUI" type="CanvasLayer" parent="."]
+script = ExtResource("2_m0cxt")
+
+[node name="DBG" parent="GUI" instance=ExtResource("6_dwbse")]
+offset_right = 216.0
+offset_bottom = 185.0
+
+[node name="Red" type="PanelContainer" parent="GUI"]
+offset_left = 307.0
+offset_top = 55.0
+offset_right = 558.0
+offset_bottom = 95.0
+
+[node name="1" type="HBoxContainer" parent="GUI/Red"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="GUI/Red/1"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="1" type="HBoxContainer" parent="GUI/Red/1"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GUI/Red/1/1"]
+layout_mode = 2
+text = "Units:"
+
+[node name="UnitsCount" type="Label" parent="GUI/Red/1/1"]
+layout_mode = 2
+text = "5"
+
+[node name="2" type="HBoxContainer" parent="GUI/Red/1"]
+layout_mode = 2
+
+[node name="1" type="Label" parent="GUI/Red/1/2"]
+layout_mode = 2
+text = "Buildings:"
+
+[node name="BuildCount" type="Label" parent="GUI/Red/1/2"]
+layout_mode = 2
+text = "5"
+
+[node name="3" type="HBoxContainer" parent="GUI/Red/1"]
+layout_mode = 2
+
+[node name="1" type="Label" parent="GUI/Red/1/3"]
+layout_mode = 2
+text = "Total:"
+
+[node name="TotalCount" type="Label" parent="GUI/Red/1/3"]
+layout_mode = 2
+text = "5"
+
+[node name="Blue" type="PanelContainer" parent="GUI"]
+offset_left = 311.0
+offset_top = 101.0
+offset_right = 562.0
+offset_bottom = 141.0
+
+[node name="1" type="HBoxContainer" parent="GUI/Blue"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="GUI/Blue/1"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+color = Color(0.043137256, 0.050980393, 1, 1)
+
+[node name="1" type="HBoxContainer" parent="GUI/Blue/1"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GUI/Blue/1/1"]
+layout_mode = 2
+text = "Units:"
+
+[node name="UnitsCount" type="Label" parent="GUI/Blue/1/1"]
+layout_mode = 2
+text = "5"
+
+[node name="2" type="HBoxContainer" parent="GUI/Blue/1"]
+layout_mode = 2
+
+[node name="1" type="Label" parent="GUI/Blue/1/2"]
+layout_mode = 2
+text = "Buildings:"
+
+[node name="BuildCount" type="Label" parent="GUI/Blue/1/2"]
+layout_mode = 2
+text = "5"
+
+[node name="3" type="HBoxContainer" parent="GUI/Blue/1"]
+layout_mode = 2
+
+[node name="1" type="Label" parent="GUI/Blue/1/3"]
+layout_mode = 2
+text = "Total:"
+
+[node name="TotalCount" type="Label" parent="GUI/Blue/1/3"]
+layout_mode = 2
+text = "5"
+
+[node name="TeamRed" type="Node2D" parent="." node_paths=PackedStringArray("current_enemy")]
+script = ExtResource("12_k3n1d")
+current_enemy = NodePath("../TeamBlue")
+
+[node name="TeamBlue" type="Node2D" parent="." node_paths=PackedStringArray("current_enemy")]
+script = ExtResource("12_k3n1d")
+fraction = 1
+current_enemy = NodePath("../TeamRed")
+
+[node name="Nv" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_dqqhb")
+travel_cost = 3.0
+script = ExtResource("9_ioo17")
+
+[node name="Road" type="NavigationRegion2D" parent="Nv"]
+navigation_polygon = SubResource("NavigationPolygon_mad0u")
+script = ExtResource("10_k3n1d")
+outline = PackedVector2Array(1510.3884, 298.62674, 1591.6342, 311.42133, 1628, 285, 1661.7141, 309.4947, 1846.243, 343.29456, 1839.757, 378.70544, 1666.6351, 346.995, 1665.0231, 351.9563, 1690.3193, 394.76532, 1674.6912, 460.7515, 1680.0422, 464.6393, 1665.5114, 509.3607, 1654.1212, 509.3607, 1582.6335, 610.79565, 1526.1223, 637.4519, 1392.5768, 740.5028, 1238.8606, 714, 1125.1738, 714, 1090.6313, 728.9373, 1090.6313, 748.5, 1059.2837, 766.5986, 1060.0496, 833.22266, 1022.72, 892.94995, 997.28, 877.05005, 1029.9504, 824.77734, 1029.2988, 768.08966, 995.3686, 748.5, 995.3686, 740.5857, 898.4072, 730.6605, 825.5466, 710.7894, 739.2749, 731.0886, 638.81445, 692.91364, 582.7729, 703.9745, 581.11475, 709.0777, 621.7572, 756.638, 646.4242, 791.5829, 605.5758, 820.4171, 582.2428, 787.362, 546.5048, 745.541, 539.7386, 745.541, 522.39246, 829.4962, 498.96582, 925.4339, 404.81152, 987.8385, 377.18848, 946.1615, 455.03418, 894.5661, 473.60754, 818.5038, 491.74866, 730.7007, 414.42917, 745.3055, 360.34497, 713.5604, 385.65503, 670.4396, 423.57083, 692.6945, 478.20868, 682.374, 476.9366, 678.459, 534, 637, 561.74744, 657.15967, 643.18555, 641.08636, 742.7251, 678.9114, 826.4534, 659.2106, 907.5928, 681.3395, 1000.0405, 690.8026, 1043, 666, 1071.7784, 682.61523, 1114.8262, 664, 1243.1394, 664, 1379.4232, 687.4972, 1499.8777, 594.5481, 1549.3665, 571.20435, 1610.4302, 484.55963, 1603.9578, 464.6393, 1638.63, 439.4485, 1647.6807, 401.23468, 1632.4448, 375.45087, 1628.8164, 375.45087, 1539.7573, 418.16882, 1524.2427, 385.83105, 1591.5012, 353.56992, 1589.5404, 347.53528, 1499.6116, 333.37326, 1409.2468, 290.24466, 1424.7532, 257.75534)
+
+[node name="Hub3" type="Node2D" parent="Nv/Road"]
+visible = false
+position = Vector2(1043, 721)
+script = ExtResource("11_k3n1d")
+road_width = 55.0
+pts_count = 6
+outline = PackedVector2Array(0, -55, 47.6314, -27.499998, 47.631397, 27.500004, -4.808253e-06, 55, -47.6314, 27.499994, -47.6314, -27.499994)
+
+[node name="Seg" type="Line2D" parent="Nv/Road/Hub3"]
+position = Vector2(-295, -266)
+points = PackedVector2Array(298, 266, 372, 234, 493, 234, 638, 259, 765, 161, 818, 136, 892, 31)
+width = 1.0
+default_color = Color(1, 1, 0, 0)
+script = ExtResource("10_wse8f")
+road_width = 25.0
+outline = PackedVector2Array(307.9228, 288.9464, 377.1739, 259, 490.8606, 259, 644.5768, 285.50278, 778.1223, 182.4519, 834.6336, 155.79562, 912.435, 45.401794, 871.565, 16.598206, 801.3664, 116.20437, 751.8777, 139.5481, 631.4232, 232.49721, 495.1394, 209, 366.8261, 209, 288.0772, 243.05357)
+
+[node name="Hub" type="Node2D" parent="Nv/Road/Hub3/Seg"]
+position = Vector2(894, 22)
+script = ExtResource("11_k3n1d")
+road_width = 40.0
+outline = PackedVector2Array(0, -40, 38.042263, -12.360679, 23.511408, 32.360683, -23.511414, 32.36068, -38.04226, -12.360685)
+
+[node name="Seg" type="Line2D" parent="Nv/Road/Hub3/Seg/Hub"]
+position = Vector2(-545, -202)
+points = PackedVector2Array(533, 57, 572, 123, 554, 199)
+width = 1.0
+default_color = Color(1, 1, 0, 0)
+script = ExtResource("10_wse8f")
+road_width = 20.0
+outline = PackedVector2Array(515.7815, 67.17459, 550.6806, 126.234665, 534.5384, 194.39067, 573.4616, 203.60933, 593.3194, 119.765335, 550.2185, 46.825413)
+
+[node name="Hub2" type="Node2D" parent="Nv/Road/Hub3/Seg/Hub/Seg"]
+position = Vector2(531, 60)
+script = ExtResource("11_k3n1d")
+road_width = 50.0
+outline = PackedVector2Array(0, -50, 47.552826, -15.450849, 29.38926, 40.45085, -29.389269, 40.450848, -47.552826, -15.450856)
+
+[node name="Seg" type="Line2D" parent="Nv/Road/Hub3/Seg/Hub/Seg/Hub2"]
+position = Vector2(-4, -1)
+points = PackedVector2Array(17, -10, 219, 27)
+width = 1.0
+default_color = Color(1, 1, 0, 0)
+script = ExtResource("10_wse8f")
+road_width = 18.0
+outline = PackedVector2Array(13.756926, 7.7054367, 215.75693, 44.705437, 222.24307, 9.294563, 20.243074, -27.705437)
+
+[node name="Seg2" type="Line2D" parent="Nv/Road/Hub3/Seg/Hub/Seg/Hub2"]
+position = Vector2(-228, -51)
+points = PackedVector2Array(17, -10, 105, 32, 232, 52)
+width = 1.0
+default_color = Color(1, 1, 0, 0)
+script = ExtResource("10_wse8f")
+road_width = 18.0
+outline = PackedVector2Array(9.246867, 6.2446594, 99.61156, 49.37326, 229.19986, 69.78087, 234.80014, 34.21913, 110.38844, 14.626741, 24.753132, -26.24466)
+
+[node name="Seg3" type="Line2D" parent="Nv/Road/Hub3/Seg/Hub/Seg/Hub2"]
+position = Vector2(-229.13686, 83.94437)
+rotation = -0.33195224
+scale = Vector2(0.9966935, 0.9962987)
+points = PackedVector2Array(131.82654, 27.470154, 251.27502, 13.63208)
+width = 1.0
+default_color = Color(1, 1, 0, 0)
+script = ExtResource("10_wse8f")
+road_width = 18.0
+outline = PackedVector2Array(133.89798, 45.350567, 253.34647, 31.512493, 249.20358, -4.248333, 129.7551, 9.589741)
+
+[node name="Seg2" type="Line2D" parent="Nv/Road/Hub3"]
+position = Vector2(-545, -202)
+points = PackedVector2Array(546, 223, 547, 310, 512, 366)
+width = 1.0
+default_color = Color(1, 1, 0, 0)
+script = ExtResource("10_wse8f")
+road_width = 15.0
+outline = PackedVector2Array(531.001, 223.17241, 531.9505, 305.7773, 499.28003, 358.05002, 524.72, 373.94998, 562.0495, 314.2227, 560.999, 222.82759)
+
+[node name="Seg3" type="Line2D" parent="Nv/Road/Hub3"]
+position = Vector2(-545, -202)
+points = PackedVector2Array(532, 200, 405, 187, 328, 166, 243, 186, 143, 148, 67, 163)
+width = 1.0
+default_color = Color(1, 1, 0, 0)
+script = ExtResource("10_wse8f")
+road_width = 25.0
+outline = PackedVector2Array(534.5458, 175.12996, 409.59274, 162.3395, 328.45343, 140.21059, 244.7251, 159.91138, 145.18558, 122.08636, 62.159172, 138.47314, 71.84083, 187.52686, 140.81442, 173.91364, 241.2749, 212.08862, 327.54657, 191.78941, 400.40726, 211.6605, 529.4542, 224.87004)
+
+[node name="Hub" type="Node2D" parent="Nv/Road/Hub3/Seg3"]
+position = Vector2(36, 178)
+script = ExtResource("11_k3n1d")
+road_width = 60.0
+outline = PackedVector2Array(0, -60, 57.063393, -18.541018, 35.267113, 48.541023, -35.26712, 48.541016, -57.06339, -18.541027)
+metadata/_custom_type_script = "uid://dt4c3jwdcef35"
+
+[node name="Seg2" type="Line2D" parent="Nv/Road/Hub3/Seg3/Hub"]
+position = Vector2(-537, -202)
+points = PackedVector2Array(558, 222, 605, 277, 629, 311)
+width = 1.0
+default_color = Color(1, 1, 0, 0)
+script = ExtResource("10_wse8f")
+road_width = 25.0
+outline = PackedVector2Array(538.9942, 238.2413, 585.2428, 292.362, 608.5758, 325.41708, 649.4242, 296.58292, 624.7572, 261.638, 577.0058, 205.7587)
+
+[node name="Seg3" type="Line2D" parent="Nv/Road/Hub3/Seg3/Hub"]
+position = Vector2(-545, -202)
+points = PackedVector2Array(520, 207, 430, 224, 384, 197)
+width = 1.0
+default_color = Color(1, 1, 0, 0)
+script = ExtResource("10_wse8f")
+road_width = 25.0
+outline = PackedVector2Array(515.3598, 182.4344, 434.57083, 197.69453, 396.65503, 175.4396, 371.34497, 218.5604, 425.42917, 250.30547, 524.6402, 231.5656)
+
+[node name="Seg4" type="Line2D" parent="Nv/Road/Hub3/Seg3/Hub"]
+position = Vector2(-545, -202)
+points = PackedVector2Array(534, 208, 509, 329, 488, 415, 402, 472)
+width = 1.0
+default_color = Color(1, 1, 0, 0)
+script = ExtResource("10_wse8f")
+road_width = 25.0
+outline = PackedVector2Array(509.5171, 202.94154, 484.60754, 323.5038, 466.03418, 399.5661, 388.18848, 451.16153, 415.81152, 492.83847, 509.96582, 430.4339, 533.39246, 334.4962, 558.4829, 213.05846)
+
+[node name="Objects" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Archer Barrack" type="Sprite2D" parent="Objects" node_paths=PackedStringArray("mng")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(267, 975)
+texture = ExtResource("15_p2iis")
+centered = false
+offset = Vector2(-76, -175)
+script = ExtResource("15_ysn08")
+actor_scene = ExtResource("17_aysyn")
+mng = NodePath("../..")
+data = ExtResource("14_aysyn")
+auto_activate = true
+metadata/_custom_type_script = "uid://d3nqemhglb41g"
+
+[node name="Barrack" type="Sprite2D" parent="Objects" node_paths=PackedStringArray("mng")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(257, 739)
+texture = ExtResource("15_p2iis")
+centered = false
+offset = Vector2(-76, -175)
+script = ExtResource("15_ysn08")
+actor_scene = ExtResource("17_aysyn")
+mng = NodePath("../..")
+data = ExtResource("18_o1net")
+auto_activate = true
+metadata/_custom_type_script = "uid://d3nqemhglb41g"
+
+[node name="Barrack2" type="Sprite2D" parent="Objects" node_paths=PackedStringArray("mng")]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(1826, 304)
+texture = ExtResource("15_p2iis")
+centered = false
+offset = Vector2(-76, -175)
+script = ExtResource("15_ysn08")
+actor_scene = ExtResource("17_aysyn")
+fraction = 1
+mng = NodePath("../..")
+data = ExtResource("18_o1net")
+auto_activate = true
+metadata/_custom_type_script = "uid://d3nqemhglb41g"
+
+[node name="Archer Barrack2" type="Sprite2D" parent="Objects" node_paths=PackedStringArray("mng")]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(1459, 264)
+texture = ExtResource("15_p2iis")
+centered = false
+offset = Vector2(-76, -175)
+script = ExtResource("15_ysn08")
+actor_scene = ExtResource("17_aysyn")
+fraction = 1
+mng = NodePath("../..")
+data = ExtResource("14_aysyn")
+auto_activate = true
+metadata/_custom_type_script = "uid://d3nqemhglb41g"
+
+[node name="FXMng" type="Node" parent="."]
+script = ExtResource("17_ysn08")
+text = ExtResource("16_h8lre")

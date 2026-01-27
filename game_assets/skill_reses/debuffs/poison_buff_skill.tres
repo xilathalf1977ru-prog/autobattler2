@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BuffSkill" load_steps=5 format=3 uid="uid://rrcoqy02b3lg"]
+
+[ext_resource type="Script" uid="uid://26jw42og1qgp" path="res://game_actors/skills/buff.gd" id="1_6l653"]
+[ext_resource type="Script" uid="uid://xlrjfirdp2ey" path="res://game_actors/skills/effect.gd" id="2_lcu6l"]
+[ext_resource type="Script" uid="uid://c6qd6b8pvhcym" path="res://game_actors/skills/effects/dmg_effect.gd" id="3_lcu6l"]
+
+[sub_resource type="Resource" id="Resource_imwsf"]
+script = ExtResource("3_lcu6l")
+val = 1.0
+metadata/_custom_type_script = "uid://c6qd6b8pvhcym"
+
+[resource]
+script = ExtResource("1_6l653")
+tick = 0.5
+time = 3.0
+target_effects = Array[ExtResource("2_lcu6l")]([SubResource("Resource_imwsf")])
+metadata/_custom_type_script = "uid://26jw42og1qgp"

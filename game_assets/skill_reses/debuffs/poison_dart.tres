@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ProjectileSkill" load_steps=7 format=3 uid="uid://c1o14s5rbmon0"]
+
+[ext_resource type="Script" uid="uid://csihjt1coune8" path="res://game_actors/skills/pr_skill.gd" id="1_txyih"]
+[ext_resource type="PackedScene" uid="uid://dnubacjcpd6wk" path="res://game_assets/skills_screnes/poison_dart.tscn" id="2_vdljt"]
+[ext_resource type="Script" uid="uid://xlrjfirdp2ey" path="res://game_actors/skills/effect.gd" id="3_4abat"]
+[ext_resource type="Resource" uid="uid://rrcoqy02b3lg" path="res://game_assets/skill_reses/debuffs/poison_buff_skill.tres" id="5_qnrco"]
+[ext_resource type="Script" uid="uid://b77cj6p15dcjq" path="res://game_actors/skills/effects/buff_effect.gd" id="6_sjk77"]
+
+[sub_resource type="Resource" id="Resource_vdljt"]
+script = ExtResource("6_sjk77")
+buff = ExtResource("5_qnrco")
+metadata/_custom_type_script = "uid://b77cj6p15dcjq"
+
+[resource]
+script = ExtResource("1_txyih")
+skill_scene = ExtResource("2_vdljt")
+target_effects = Array[ExtResource("3_4abat")]([SubResource("Resource_vdljt")])
+metadata/_custom_type_script = "uid://csihjt1coune8"

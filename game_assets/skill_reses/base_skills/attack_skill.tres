@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=5 format=3 uid="uid://utc801rv3t0r"]
+
+[ext_resource type="Script" uid="uid://4ik60cr210hr" path="res://game_actors/skills/skill.gd" id="1_33r3y"]
+[ext_resource type="Script" uid="uid://xlrjfirdp2ey" path="res://game_actors/skills/effect.gd" id="2_rxmis"]
+[ext_resource type="Script" uid="uid://c6qd6b8pvhcym" path="res://game_actors/skills/effects/dmg_effect.gd" id="3_rxmis"]
+
+[sub_resource type="Resource" id="Resource_htp27"]
+script = ExtResource("3_rxmis")
+val = 20.0
+metadata/_custom_type_script = "uid://c6qd6b8pvhcym"
+
+[resource]
+script = ExtResource("1_33r3y")
+target_effects = Array[ExtResource("2_rxmis")]([SubResource("Resource_htp27")])
+metadata/_custom_type_script = "uid://4ik60cr210hr"

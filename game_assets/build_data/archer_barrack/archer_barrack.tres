@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="UnitSpawnerData" load_steps=8 format=3 uid="uid://qriqrm6sdhaq"]
+
+[ext_resource type="Script" uid="uid://igl5wr5jn8qh" path="res://game_actors/skills/spell.gd" id="1_e7yqg"]
+[ext_resource type="Script" uid="uid://dkkv0j813bw5j" path="res://spawner/spawner_data.gd" id="2_ujnnm"]
+[ext_resource type="Resource" uid="uid://bhojesucmen73" path="res://game_assets/skill_reses/self_skills/spawn_archer_spell.tres" id="3_ift2i"]
+[ext_resource type="Script" uid="uid://dl08bt5502t8h" path="res://game_actors/components/resourse_components/sound_data.gd" id="3_nd7vg"]
+[ext_resource type="Texture2D" uid="uid://diwp5la6l8tlw" path="res://assets/hom.png" id="5_8mcw3"]
+[ext_resource type="Script" uid="uid://d2km05mxcm56e" path="res://game_actors/fsm/state_visual_data.gd" id="6_uwhxl"]
+
+[sub_resource type="Resource" id="Resource_fxexy"]
+script = ExtResource("6_uwhxl")
+texture = ExtResource("5_8mcw3")
+metadata/_custom_type_script = "uid://d2km05mxcm56e"
+
+[resource]
+script = ExtResource("2_ujnnm")
+nom = "Archer Barrack"
+spawner_texture = ExtResource("5_8mcw3")
+is_building = true
+max_hp = 90.0
+spells = Dictionary[ExtResource("1_e7yqg"), bool]({
+ExtResource("3_ift2i"): true
+})
+texture = SubResource("Resource_fxexy")
+metadata/_custom_type_script = "uid://dkkv0j813bw5j"

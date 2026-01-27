@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Root" load_steps=25 format=3 uid="uid://cj3n23yur4ici"]
+
+[ext_resource type="Script" uid="uid://b4m8en5a83c0l" path="res://game_actors/fsm/state.gd" id="1_wwdrk"]
+[ext_resource type="Script" uid="uid://ed8ls8ixvgl" path="res://game_actors/fsm/states/attack.gd" id="2_ldk4k"]
+[ext_resource type="Script" uid="uid://gfeij8146hvu" path="res://game_actors/fsm/states/swing.gd" id="3_mj5ur"]
+[ext_resource type="Script" uid="uid://bb4pvywqlqxpd" path="res://game_actors/fsm/states/cast.gd" id="4_qts1l"]
+[ext_resource type="Script" uid="uid://csfpu7hhjcpsr" path="res://game_actors/fsm/states/chase.gd" id="5_2o2k4"]
+[ext_resource type="Script" uid="uid://ce5kiyt27krs0" path="res://game_actors/fsm/hfsm/combat_node.gd" id="6_cedgv"]
+[ext_resource type="Script" uid="uid://dhngvvkemgpyq" path="res://game_actors/fsm/states/move.gd" id="7_heq2r"]
+[ext_resource type="Script" uid="uid://dtarjb3ipqchs" path="res://game_actors/fsm/states/idle.gd" id="8_k86w8"]
+[ext_resource type="Script" uid="uid://rwauchcnlg3i" path="res://game_actors/fsm/hfsm/travel_node.gd" id="9_ina4p"]
+[ext_resource type="Script" uid="uid://42clr85q46e" path="res://game_actors/fsm/hfsm/offfensive_node.gd" id="10_vajkp"]
+[ext_resource type="Script" uid="uid://c51ss8vatgmc8" path="res://game_actors/fsm/hfsm/retreat_node.gd" id="11_a1i3m"]
+[ext_resource type="Script" uid="uid://bi00tsiv15smh" path="res://game_actors/fsm/states/dying.gd" id="12_677xy"]
+[ext_resource type="Script" uid="uid://ljkk7lvjqgaa" path="res://game_actors/fsm/hfsm/root_node.gd" id="13_ekevo"]
+
+[sub_resource type="Resource" id="Resource_igjl5"]
+script = ExtResource("2_ldk4k")
+
+[sub_resource type="Resource" id="Resource_17q4t"]
+script = ExtResource("3_mj5ur")
+
+[sub_resource type="Resource" id="Resource_ap7t0"]
+script = ExtResource("4_qts1l")
+
+[sub_resource type="Resource" id="Resource_cwhfv"]
+script = ExtResource("5_2o2k4")
+
+[sub_resource type="Resource" id="Resource_4fmhg"]
+script = ExtResource("6_cedgv")
+default_state = 2
+__build_states = Array[ExtResource("1_wwdrk")]([SubResource("Resource_igjl5"), SubResource("Resource_17q4t"), SubResource("Resource_ap7t0"), SubResource("Resource_cwhfv")])
+
+[sub_resource type="Resource" id="Resource_gjis7"]
+script = ExtResource("7_heq2r")
+
+[sub_resource type="Resource" id="Resource_4mag8"]
+script = ExtResource("8_k86w8")
+
+[sub_resource type="Resource" id="Resource_u6xle"]
+script = ExtResource("9_ina4p")
+default_state = 1
+__build_states = Array[ExtResource("1_wwdrk")]([SubResource("Resource_gjis7"), SubResource("Resource_4mag8")])
+
+[sub_resource type="Resource" id="Resource_nwc5f"]
+script = ExtResource("10_vajkp")
+default_state = 7
+__build_states = Array[ExtResource("1_wwdrk")]([SubResource("Resource_4fmhg"), SubResource("Resource_u6xle")])
+
+[sub_resource type="Resource" id="Resource_f10w0"]
+script = ExtResource("11_a1i3m")
+default_state = 1
+__build_states = Array[ExtResource("1_wwdrk")]([SubResource("Resource_gjis7"), SubResource("Resource_4mag8")])
+
+[sub_resource type="Resource" id="Resource_ikjag"]
+script = ExtResource("12_677xy")
+
+[resource]
+script = ExtResource("13_ekevo")
+default_state = 6
+__build_states = Array[ExtResource("1_wwdrk")]([SubResource("Resource_nwc5f"), SubResource("Resource_f10w0"), SubResource("Resource_ikjag")])

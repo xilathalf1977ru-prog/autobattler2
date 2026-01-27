@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="UnitSpawnerData" load_steps=8 format=3 uid="uid://dglr37jf73fxk"]
+
+[ext_resource type="Script" uid="uid://igl5wr5jn8qh" path="res://game_actors/skills/spell.gd" id="1_gh56e"]
+[ext_resource type="Script" uid="uid://dkkv0j813bw5j" path="res://spawner/spawner_data.gd" id="2_6vgg5"]
+[ext_resource type="Script" uid="uid://dl08bt5502t8h" path="res://game_actors/components/resourse_components/sound_data.gd" id="3_pctxf"]
+[ext_resource type="Resource" uid="uid://cfclfxkoewwbc" path="res://game_assets/skill_reses/self_skills/spawn_spell.tres" id="4_h2asx"]
+[ext_resource type="Script" uid="uid://d2km05mxcm56e" path="res://game_actors/fsm/state_visual_data.gd" id="4_pctxf"]
+[ext_resource type="Texture2D" uid="uid://diwp5la6l8tlw" path="res://assets/hom.png" id="5_7pic2"]
+
+[sub_resource type="Resource" id="Resource_mi3ai"]
+script = ExtResource("4_pctxf")
+texture = ExtResource("5_7pic2")
+metadata/_custom_type_script = "uid://d2km05mxcm56e"
+
+[resource]
+script = ExtResource("2_6vgg5")
+nom = "Barrack"
+spawner_texture = ExtResource("5_7pic2")
+is_building = true
+max_hp = 200.0
+spells = Dictionary[ExtResource("1_gh56e"), bool]({
+ExtResource("4_h2asx"): true
+})
+texture = SubResource("Resource_mi3ai")
+metadata/_custom_type_script = "uid://dkkv0j813bw5j"

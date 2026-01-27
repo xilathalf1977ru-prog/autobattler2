@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=6 format=3 uid="uid://dj8t5tami3l44"]
+
+[ext_resource type="Script" uid="uid://igl5wr5jn8qh" path="res://game_actors/skills/spell.gd" id="1_4j3vf"]
+[ext_resource type="Resource" uid="uid://c5eegv3jx14fe" path="res://game_assets/skill_reses/bolt_skill.tres" id="1_f58yw"]
+[ext_resource type="Script" uid="uid://dl08bt5502t8h" path="res://game_actors/components/resourse_components/sound_data.gd" id="3_mtw3p"]
+[ext_resource type="AudioStream" uid="uid://issy5il7vx1x" path="res://assets/sound/cross_bow_hit.wav" id="4_x3d40"]
+
+[sub_resource type="Resource" id="Resource_xf7rg"]
+script = ExtResource("3_mtw3p")
+sounds = Array[AudioStream]([ExtResource("4_x3d40")])
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[resource]
+script = ExtResource("1_4j3vf")
+nom = "Far bolt"
+sound = SubResource("Resource_xf7rg")
+cd = 1.5
+cast_range = 350.0
+_skill = ExtResource("1_f58yw")
+metadata/_custom_type_script = "uid://igl5wr5jn8qh"

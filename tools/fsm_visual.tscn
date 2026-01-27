@@ -1,0 +1,107 @@
+[gd_scene load_steps=26 format=3 uid="uid://crqmi7iv0kkkd"]
+
+[ext_resource type="Script" uid="uid://7bu0k4yil0fp" path="res://tools/fsm_visual.gd" id="1_r0dlw"]
+[ext_resource type="Resource" uid="uid://cj3n23yur4ici" path="res://tools/build_root.tres" id="2_c82u6"]
+[ext_resource type="Script" uid="uid://b4m8en5a83c0l" path="res://game_actors/fsm/state.gd" id="3_dfyiq"]
+[ext_resource type="Script" uid="uid://gfeij8146hvu" path="res://game_actors/fsm/states/swing.gd" id="6_nj15h"]
+[ext_resource type="Script" uid="uid://csfpu7hhjcpsr" path="res://game_actors/fsm/states/chase.gd" id="7_7xjh0"]
+[ext_resource type="Script" uid="uid://ed8ls8ixvgl" path="res://game_actors/fsm/states/attack.gd" id="8_8tcku"]
+[ext_resource type="Script" uid="uid://bb4pvywqlqxpd" path="res://game_actors/fsm/states/cast.gd" id="10_exhlx"]
+[ext_resource type="Script" uid="uid://ce5kiyt27krs0" path="res://game_actors/fsm/hfsm/combat_node.gd" id="11_27e1u"]
+[ext_resource type="Script" uid="uid://dtarjb3ipqchs" path="res://game_actors/fsm/states/idle.gd" id="12_gf4f7"]
+[ext_resource type="Script" uid="uid://dhngvvkemgpyq" path="res://game_actors/fsm/states/move.gd" id="13_qsc8w"]
+[ext_resource type="Script" uid="uid://rwauchcnlg3i" path="res://game_actors/fsm/hfsm/travel_node.gd" id="15_soin6"]
+[ext_resource type="Script" uid="uid://42clr85q46e" path="res://game_actors/fsm/hfsm/offfensive_node.gd" id="16_43acn"]
+[ext_resource type="Script" uid="uid://c51ss8vatgmc8" path="res://game_actors/fsm/hfsm/retreat_node.gd" id="17_ynuxa"]
+[ext_resource type="Script" uid="uid://bi00tsiv15smh" path="res://game_actors/fsm/states/dying.gd" id="18_75373"]
+
+[sub_resource type="Resource" id="Resource_igjl5"]
+script = ExtResource("8_8tcku")
+
+[sub_resource type="Resource" id="Resource_17q4t"]
+script = ExtResource("6_nj15h")
+
+[sub_resource type="Resource" id="Resource_ap7t0"]
+script = ExtResource("10_exhlx")
+
+[sub_resource type="Resource" id="Resource_cwhfv"]
+script = ExtResource("7_7xjh0")
+
+[sub_resource type="Resource" id="Resource_4fmhg"]
+script = ExtResource("11_27e1u")
+default_state = 2
+__build_states = Array[ExtResource("3_dfyiq")]([SubResource("Resource_igjl5"), SubResource("Resource_17q4t"), SubResource("Resource_ap7t0"), SubResource("Resource_cwhfv")])
+
+[sub_resource type="Resource" id="Resource_gjis7"]
+script = ExtResource("13_qsc8w")
+
+[sub_resource type="Resource" id="Resource_4mag8"]
+script = ExtResource("12_gf4f7")
+
+[sub_resource type="Resource" id="Resource_u6xle"]
+script = ExtResource("15_soin6")
+default_state = 1
+__build_states = Array[ExtResource("3_dfyiq")]([SubResource("Resource_gjis7"), SubResource("Resource_4mag8")])
+
+[sub_resource type="Resource" id="Resource_nwc5f"]
+script = ExtResource("16_43acn")
+default_state = 7
+__build_states = Array[ExtResource("3_dfyiq")]([SubResource("Resource_4fmhg"), SubResource("Resource_u6xle")])
+
+[sub_resource type="Resource" id="Resource_f10w0"]
+script = ExtResource("17_ynuxa")
+default_state = 1
+__build_states = Array[ExtResource("3_dfyiq")]([SubResource("Resource_gjis7"), SubResource("Resource_4mag8")])
+
+[sub_resource type="Resource" id="Resource_ikjag"]
+script = ExtResource("18_75373")
+
+[node name="FsmVisual" type="Node2D"]
+script = ExtResource("1_r0dlw")
+root = ExtResource("2_c82u6")
+transitions = Dictionary[String, PackedStringArray]({
+"Attack": PackedStringArray("CHASE"),
+"Chase": PackedStringArray("COMBAT_CAST", "SWING"),
+"Combat": PackedStringArray("TRAVEL"),
+"CombatCast": PackedStringArray("CHASE"),
+"Dying": PackedStringArray(),
+"Idle": PackedStringArray(),
+"Move": PackedStringArray("IDLE"),
+"Offensive": PackedStringArray("RETREAT"),
+"Retreat": PackedStringArray("OFFENSIVE"),
+"Root": PackedStringArray(),
+"Swing": PackedStringArray("ATTACK"),
+"Travel": PackedStringArray()
+})
+positions = Dictionary[String, Rect2]({
+"Root": Rect2(0, 424, 256, 96),
+"RootDying": Rect2(296, 848, 256, 96),
+"RootOffensive": Rect2(296, 265, 256, 96),
+"RootOffensiveCombat": Rect2(592, 159, 256, 96),
+"RootOffensiveCombatAttack": Rect2(888, 0, 256, 96),
+"RootOffensiveCombatChase": Rect2(888, 318, 256, 96),
+"RootOffensiveCombatCombatCast": Rect2(888, 212, 256, 96),
+"RootOffensiveCombatSwing": Rect2(888, 106, 256, 96),
+"RootOffensiveTravel": Rect2(592, 477, 256, 96),
+"RootOffensiveTravelIdle": Rect2(888, 530, 256, 96),
+"RootOffensiveTravelMove": Rect2(888, 424, 256, 96),
+"RootRetreat": Rect2(296, 689, 256, 96),
+"RootRetreatIdle": Rect2(592, 742, 256, 96),
+"RootRetreatMove": Rect2(592, 636, 256, 96)
+})
+scripts = Dictionary[String, ExtResource("3_dfyiq")]({
+"Root": ExtResource("2_c82u6"),
+"RootDying": SubResource("Resource_ikjag"),
+"RootOffensive": SubResource("Resource_nwc5f"),
+"RootOffensiveCombat": SubResource("Resource_4fmhg"),
+"RootOffensiveCombatAttack": SubResource("Resource_igjl5"),
+"RootOffensiveCombatChase": SubResource("Resource_cwhfv"),
+"RootOffensiveCombatCombatCast": SubResource("Resource_ap7t0"),
+"RootOffensiveCombatSwing": SubResource("Resource_17q4t"),
+"RootOffensiveTravel": SubResource("Resource_u6xle"),
+"RootOffensiveTravelIdle": SubResource("Resource_4mag8"),
+"RootOffensiveTravelMove": SubResource("Resource_gjis7"),
+"RootRetreat": SubResource("Resource_f10w0"),
+"RootRetreatIdle": SubResource("Resource_4mag8"),
+"RootRetreatMove": SubResource("Resource_gjis7")
+})

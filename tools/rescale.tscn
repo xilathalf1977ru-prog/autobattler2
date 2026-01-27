@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://di38fitppurvk"]
+
+[ext_resource type="Script" uid="uid://bf8tt7e8gc8wc" path="res://tools/rescale.gd" id="1_k6ckw"]
+
+[node name="Rescale" type="Node2D"]
+script = ExtResource("1_k6ckw")
+factor = 0.23

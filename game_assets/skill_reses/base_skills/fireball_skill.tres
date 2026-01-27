@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ProjectileSkill" load_steps=6 format=3 uid="uid://41pad2gnbiiv"]
+
+[ext_resource type="Script" uid="uid://csihjt1coune8" path="res://game_actors/skills/pr_skill.gd" id="1_xdrgw"]
+[ext_resource type="PackedScene" uid="uid://cl3dclf2et8qa" path="res://game_assets/skills_screnes/fireball.tscn" id="2_aet0v"]
+[ext_resource type="Script" uid="uid://xlrjfirdp2ey" path="res://game_actors/skills/effect.gd" id="3_epd88"]
+[ext_resource type="Script" uid="uid://c6qd6b8pvhcym" path="res://game_actors/skills/effects/dmg_effect.gd" id="4_njiih"]
+
+[sub_resource type="Resource" id="Resource_fw3bi"]
+script = ExtResource("4_njiih")
+val = 40.0
+metadata/_custom_type_script = "uid://c6qd6b8pvhcym"
+
+[resource]
+script = ExtResource("1_xdrgw")
+skill_scene = ExtResource("2_aet0v")
+target_effects = Array[ExtResource("3_epd88")]([SubResource("Resource_fw3bi")])
+metadata/_custom_type_script = "uid://csihjt1coune8"

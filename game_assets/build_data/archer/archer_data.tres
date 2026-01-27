@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="UnitSpawnerData" load_steps=14 format=3 uid="uid://dlkmnsn848ct8"]
+
+[ext_resource type="Script" uid="uid://igl5wr5jn8qh" path="res://game_actors/skills/spell.gd" id="1_5l0iq"]
+[ext_resource type="Resource" uid="uid://cpibysn68fn7c" path="res://game_assets/skill_reses/base_skills/arrow_skill.tres" id="1_xfo7m"]
+[ext_resource type="Script" uid="uid://dkkv0j813bw5j" path="res://spawner/spawner_data.gd" id="2_y6fvq"]
+[ext_resource type="Script" uid="uid://dl08bt5502t8h" path="res://game_actors/components/resourse_components/sound_data.gd" id="3_cqtg6"]
+[ext_resource type="Resource" uid="uid://b2dfrk1jvjgfm" path="res://game_assets/build_data/archer/archer_root.tres" id="4_vacbj"]
+[ext_resource type="AudioStream" uid="uid://c8sasbmokjtd" path="res://assets/sound/arrow.mp3" id="7_7tmmb"]
+[ext_resource type="AudioStream" uid="uid://o5mbo814dh7y" path="res://assets/sound/arrow_swing.mp3" id="8_jxvhh"]
+[ext_resource type="AudioStream" uid="uid://dsrp277t04mu" path="res://assets/sound/makak_ow.mp3" id="9_y8bqg"]
+[ext_resource type="Texture2D" uid="uid://bfveaisxopsas" path="res://assets/units/archer/arch_cast.png" id="10_rl67s"]
+
+[sub_resource type="Resource" id="Resource_8rmjf"]
+script = ExtResource("3_cqtg6")
+sounds = Array[AudioStream]([ExtResource("7_7tmmb")])
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[sub_resource type="Resource" id="Resource_kq1bc"]
+script = ExtResource("3_cqtg6")
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[sub_resource type="Resource" id="Resource_cfdtq"]
+script = ExtResource("3_cqtg6")
+sounds = Array[AudioStream]([ExtResource("8_jxvhh")])
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[sub_resource type="Resource" id="Resource_h5whs"]
+script = ExtResource("3_cqtg6")
+is_forced = true
+sounds = Array[AudioStream]([ExtResource("9_y8bqg")])
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[resource]
+script = ExtResource("2_y6fvq")
+nom = "Archer"
+spawner_texture = ExtResource("10_rl67s")
+max_hp = 25.0
+sound_data = Dictionary[int, ExtResource("3_cqtg6")]({
+0: SubResource("Resource_8rmjf"),
+1: SubResource("Resource_kq1bc"),
+2: SubResource("Resource_cfdtq"),
+3: SubResource("Resource_h5whs")
+})
+meta = PackedStringArray("ranger")
+vision = 300.0
+fsm_root = ExtResource("4_vacbj")
+attack = ExtResource("1_xfo7m")
+attack_range = 270.0
+max_rang = 12
+metadata/_custom_type_script = "uid://dkkv0j813bw5j"

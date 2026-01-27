@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://dg2s2ktmkrhxg"]
+
+[ext_resource type="Script" uid="uid://cjxgjjyix8far" path="res://tools/UmlDraw/class_box.gd" id="1_5do77"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s8hf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76svc"]
+bg_color = Color(0.11858138, 0.11858139, 0.11858133, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7il1q"]
+
+[node name="Box" type="PanelContainer"]
+offset_right = 27.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5s8hf")
+script = ExtResource("1_5do77")
+
+[node name="1" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="1" type="PanelContainer" parent="1"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_76svc")
+
+[node name="1" type="MarginContainer" parent="1/1"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 4
+
+[node name="1" type="VBoxContainer" parent="1/1/1"]
+layout_mode = 2
+
+[node name="N" type="RichTextLabel" parent="1/1/1/1"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/normal_font_size = 20
+fit_content = true
+autowrap_mode = 0
+
+[node name="1" type="HSeparator" parent="1/1/1/1"]
+layout_mode = 2
+theme_override_constants/separation = 12
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7il1q")
+
+[node name="V" type="RichTextLabel" parent="1/1/1/1"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/normal_font_size = 20
+fit_content = true
+autowrap_mode = 0
+
+[node name="M" type="RichTextLabel" parent="1/1/1/1"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/normal_font_size = 20
+fit_content = true
+autowrap_mode = 0

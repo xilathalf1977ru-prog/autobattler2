@@ -1,0 +1,318 @@
+[gd_scene load_steps=5 format=3 uid="uid://q8cf6nhshxai"]
+
+[sub_resource type="Animation" id="Animation_b7vta"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Root/Tors:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, -19)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Root/Tors:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Root/Tors:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Root/LLeg:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6.000002, 26)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Root/LLeg:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.11355643]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Root/LLeg:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton2D/Root/RLeg:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6, 21)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton2D/Root/RLeg:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.26733303]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton2D/Root/RLeg:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8s7gw"]
+resource_name = "idle"
+length = 1.0000083
+loop_mode = 1
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Root/Tors:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.0000083),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, -19), Vector2(0, -25), Vector2(-1, -19)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Root/Tors:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.0000083),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Root/Tors:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.0000083),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.0899749, 1.0155537), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_b3x0o"]
+resource_name = "walk"
+loop_mode = 1
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Root/LLeg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.55, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-12, 23), Vector2(-6.000002, 26), Vector2(-12, 23)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Root/LLeg:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.55, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.11355643, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Root/LLeg:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.55, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Root/RLeg:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.47, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(13, 21), Vector2(6, 21), Vector2(13, 21)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Root/RLeg:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.47, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.26733303, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Root/RLeg:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.47, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mn0f0"]
+_data = {
+&"RESET": SubResource("Animation_b7vta"),
+&"idle": SubResource("Animation_8s7gw"),
+&"walk": SubResource("Animation_b3x0o")
+}
+
+[node name="Locomotion" type="Node2D"]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="Root" type="Bone2D" parent="Skeleton2D"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="LLeg" type="Bone2D" parent="Skeleton2D/Root"]
+position = Vector2(-6.000002, 26)
+rotation = -0.11355643
+rest = Transform2D(1, 0, 0, 1, -12, 23)
+
+[node name="ColorRect" type="ColorRect" parent="Skeleton2D/Root/LLeg"]
+offset_top = -22.0
+offset_right = 14.0
+rotation = 0.06941479
+color = Color(0.43292817, 0.18163824, 0.21138999, 1)
+
+[node name="RLeg" type="Bone2D" parent="Skeleton2D/Root"]
+position = Vector2(6, 21)
+rotation = 0.26733303
+rest = Transform2D(1, 0, 0, 1, 13, 21)
+
+[node name="ColorRect" type="ColorRect" parent="Skeleton2D/Root/RLeg"]
+offset_left = -12.000002
+offset_top = -16.000002
+offset_right = 1.9999981
+offset_bottom = 5.999998
+rotation = -0.30666113
+color = Color(0.43292817, 0.18163824, 0.21138999, 1)
+
+[node name="Tors" type="Bone2D" parent="Skeleton2D/Root"]
+position = Vector2(-1, -19)
+rest = Transform2D(1, 0, 0, 1, -1, -19)
+
+[node name="Head" type="Bone2D" parent="Skeleton2D/Root/Tors"]
+position = Vector2(1, -15)
+rest = Transform2D(1, 0, 0, 1, 1, -15)
+
+[node name="ColorRect" type="ColorRect" parent="Skeleton2D/Root/Tors/Head"]
+offset_left = -7.0
+offset_top = -8.0
+offset_right = 9.0
+offset_bottom = 8.0
+color = Color(1, 1, 0.7607843, 1)
+
+[node name="LHand" type="Bone2D" parent="Skeleton2D/Root/Tors"]
+position = Vector2(20, -2)
+rest = Transform2D(1, 0, 0, 1, 20, -2)
+
+[node name="ColorRect" type="ColorRect" parent="Skeleton2D/Root/Tors/LHand"]
+offset_top = -6.0
+offset_right = 16.0
+offset_bottom = 10.0
+color = Color(1, 1, 0.7607843, 1)
+
+[node name="RHand" type="Bone2D" parent="Skeleton2D/Root/Tors"]
+position = Vector2(-24, -1)
+rest = Transform2D(1, 0, 0, 1, -24, -1)
+
+[node name="ColorRect" type="ColorRect" parent="Skeleton2D/Root/Tors/RHand"]
+offset_left = -6.0
+offset_top = -8.0
+offset_right = 10.0
+offset_bottom = 8.0
+color = Color(1, 1, 0.7607843, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Skeleton2D/Root/Tors"]
+offset_left = -12.0
+offset_top = -5.0
+offset_right = 16.0
+offset_bottom = 26.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_mn0f0")
+}
+autoplay = "walk"
+blend_times = [&"idle", &"idle", 0.002]

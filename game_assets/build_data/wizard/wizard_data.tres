@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="UnitSpawnerData" load_steps=13 format=3 uid="uid://p15hh5i5kbov"]
+
+[ext_resource type="Resource" uid="uid://41pad2gnbiiv" path="res://game_assets/skill_reses/base_skills/fireball_skill.tres" id="1_541r3"]
+[ext_resource type="Script" uid="uid://igl5wr5jn8qh" path="res://game_actors/skills/spell.gd" id="1_b3rdq"]
+[ext_resource type="Script" uid="uid://dkkv0j813bw5j" path="res://spawner/spawner_data.gd" id="2_rj5ht"]
+[ext_resource type="Resource" uid="uid://wc0xti6c075q" path="res://game_assets/build_data/wizard/wizard_root.tres" id="3_4vw02"]
+[ext_resource type="Script" uid="uid://dl08bt5502t8h" path="res://game_actors/components/resourse_components/sound_data.gd" id="3_5kgd7"]
+[ext_resource type="AudioStream" uid="uid://ca5kukbd40ggw" path="res://assets/sound/fireball_throw.mp3" id="6_4vw02"]
+[ext_resource type="Texture2D" uid="uid://ds82cxqe1m1dk" path="res://assets/units/wizard/chase.png" id="6_541r3"]
+[ext_resource type="Resource" uid="uid://ciqexahlfxxxw" path="res://game_assets/skill_reses/heal.tres" id="8_541r3"]
+
+[sub_resource type="Resource" id="Resource_s615c"]
+script = ExtResource("3_5kgd7")
+sounds = Array[AudioStream]([ExtResource("6_4vw02")])
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[sub_resource type="Resource" id="Resource_hx13u"]
+script = ExtResource("3_5kgd7")
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[sub_resource type="Resource" id="Resource_bn52a"]
+script = ExtResource("3_5kgd7")
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[sub_resource type="Resource" id="Resource_e85se"]
+script = ExtResource("3_5kgd7")
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[resource]
+script = ExtResource("2_rj5ht")
+nom = "Wizard"
+spawner_texture = ExtResource("6_541r3")
+max_hp = 15.0
+sound_data = Dictionary[int, ExtResource("3_5kgd7")]({
+0: SubResource("Resource_s615c"),
+1: SubResource("Resource_hx13u"),
+2: SubResource("Resource_bn52a"),
+3: SubResource("Resource_e85se")
+})
+spells = Dictionary[ExtResource("1_b3rdq"), bool]({
+ExtResource("8_541r3"): true
+})
+vision = 400.0
+fsm_root = ExtResource("3_4vw02")
+attack = ExtResource("1_541r3")
+attack_range = 350.0
+max_rang = 15
+metadata/_custom_type_script = "uid://dkkv0j813bw5j"

@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=13 format=3 uid="uid://bhojesucmen73"]
+
+[ext_resource type="Script" uid="uid://4ik60cr210hr" path="res://game_actors/skills/skill.gd" id="1_bfus1"]
+[ext_resource type="Script" uid="uid://igl5wr5jn8qh" path="res://game_actors/skills/spell.gd" id="1_mj78j"]
+[ext_resource type="Script" uid="uid://xlrjfirdp2ey" path="res://game_actors/skills/effect.gd" id="2_201xi"]
+[ext_resource type="Resource" uid="uid://dlkmnsn848ct8" path="res://game_assets/build_data/archer/archer_data.tres" id="3_vevq1"]
+[ext_resource type="PackedScene" uid="uid://cs35vy85mm67i" path="res://game_assets/build_data/trooper/troop.tscn" id="4_bfus1"]
+[ext_resource type="Script" uid="uid://bjcguf5w6k2pb" path="res://game_actors/skills/effects/spawn_effect.gd" id="5_qxliv"]
+[ext_resource type="Resource" uid="uid://p15hh5i5kbov" path="res://game_assets/build_data/wizard/wizard_data.tres" id="6_201xi"]
+[ext_resource type="Script" uid="uid://dl08bt5502t8h" path="res://game_actors/components/resourse_components/sound_data.gd" id="7_7pqnm"]
+
+[sub_resource type="Resource" id="Resource_ifla3"]
+script = ExtResource("5_qxliv")
+data = ExtResource("3_vevq1")
+scene = ExtResource("4_bfus1")
+metadata/_custom_type_script = "uid://bjcguf5w6k2pb"
+
+[sub_resource type="Resource" id="Resource_vevq1"]
+script = ExtResource("5_qxliv")
+data = ExtResource("6_201xi")
+scene = ExtResource("4_bfus1")
+metadata/_custom_type_script = "uid://bjcguf5w6k2pb"
+
+[sub_resource type="Resource" id="Resource_62s10"]
+script = ExtResource("1_bfus1")
+target_effects = Array[ExtResource("2_201xi")]([SubResource("Resource_ifla3"), SubResource("Resource_vevq1")])
+metadata/_custom_type_script = "uid://4ik60cr210hr"
+
+[sub_resource type="Resource" id="Resource_v4s21"]
+script = ExtResource("7_7pqnm")
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[resource]
+script = ExtResource("1_mj78j")
+nom = "Spawn Archer"
+sound = SubResource("Resource_v4s21")
+cd = 3.0
+_skill = SubResource("Resource_62s10")
+metadata/_custom_type_script = "uid://igl5wr5jn8qh"

@@ -1,0 +1,475 @@
+139::  Root:Offensive:: Set target_point to invasion
+139::  Root:Offensive:Travel:: Target setter connect
+139::  Root:Offensive:Travel:Move:: Set nv to current target pos
+139::  Root:Offensive:Travel:Move:: Enter to moving state
+872::  Root:Offensive:Travel:: Target setted
+872::  Root:Offensive:Travel:Move:: Mover stop
+872::  Root:Offensive:Travel:: Target setter disconnect
+872::  Root:Offensive:Travel -> Root:Offensive:Combat
+872::  Root:Offensive:Combat:: Target lost connected
+872::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+872::  EnemyTargeter: tareget set
+872::  AllyTargeter: tareget set
+900::  EnemyTargeter: tareget set
+903::  EnemyTargeter: tareget set
+903::  Root:Offensive:Combat:RangedChase:: Mover Stop
+903::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+903::  Swing timer started
+931::  Swing timer stoped
+931::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+931::  Attack timer started
+1076::  Attack timer stoped
+1076::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+1076::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+1078::  EnemyTargeter: tareget set
+1078::  Root:Offensive:Combat:RangedChase:: Mover Stop
+1078::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+1078::  Swing timer started
+1106::  Swing timer stoped
+1106::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+1106::  Attack timer started
+1141::  AllyTargeter: tareget die
+1141::  AllyTargeter: tareget set
+1141::  EnemyTargeter: tareget die
+1141::  EnemyTargeter: tareget set
+1251::  Attack timer stoped
+1251::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+1251::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+1253::  EnemyTargeter: tareget set
+1253::  Root:Offensive:Combat:RangedChase:: Mover Stop
+1253::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+1253::  Swing timer started
+1281::  Swing timer stoped
+1281::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+1281::  Attack timer started
+1426::  Attack timer stoped
+1426::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+1426::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+1429::  EnemyTargeter: tareget set
+1429::  Root:Offensive:Combat:RangedChase:: Mover Stop
+1429::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+1429::  Swing timer started
+1457::  Swing timer stoped
+1457::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+1457::  Attack timer started
+1503::  EnemyTargeter: tareget die
+1503::  EnemyTargeter: tareget set
+1597::  EnemyTargeter: tareget set
+1597::  AllyTargeter: tareget set
+1602::  Attack timer stoped
+1602::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+1602::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+1604::  EnemyTargeter: tareget set
+1604::  Root:Offensive:Combat:RangedChase:: Mover Stop
+1604::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+1604::  Swing timer started
+1632::  Swing timer stoped
+1632::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+1632::  Attack timer started
+1777::  Attack timer stoped
+1777::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+1777::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+1786::  AllyTargeter: tareget die
+1786::  EnemyTargeter: tareget die
+1786::  Root:Offensive:Combat:: Target lost
+1786::  Root:Offensive:Combat:RangedChase:: Mover Stop
+1786::  Root:Offensive:Combat:: Target lost disconnected
+1786::  Root:Offensive:Combat -> Root:Offensive:Travel
+1786::  Root:Offensive:Travel:: Target setter connect
+1786::  Root:Offensive:Travel:Move:: Set nv to current target pos
+1786::  Root:Offensive:Travel:Move:: Enter to moving state
+2021::  Root:Offensive:Travel:: Target setted
+2021::  Root:Offensive:Travel:Move:: Mover stop
+2021::  Root:Offensive:Travel:: Target setter disconnect
+2021::  Root:Offensive:Travel -> Root:Offensive:Combat
+2021::  Root:Offensive:Combat:: Target lost connected
+2021::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+2021::  EnemyTargeter: tareget set
+2021::  AllyTargeter: tareget set
+2049::  EnemyTargeter: tareget set
+2078::  EnemyTargeter: tareget set
+2107::  EnemyTargeter: tareget set
+2136::  EnemyTargeter: tareget set
+2137::  EnemyTargeter: tareget set
+2137::  Root:Offensive:Combat:RangedChase:: Mover Stop
+2137::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+2137::  Swing timer started
+2165::  Swing timer stoped
+2165::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+2165::  Attack timer started
+2218::  EnemyTargeter: tareget set
+2218::  AllyTargeter: tareget set
+2221::  Root:Offensive:Combat:: Target lost
+2221::  Attack timer stoped
+2221::  Root:Offensive:Combat:: Target lost disconnected
+2221::  Root:Offensive:Combat -> Root:Offensive:Travel
+2221::  Root:Offensive:Travel:: Target setter connect
+2221::  Root:Offensive:Travel:Move:: Set nv to current target pos
+2221::  Root:Offensive:Travel:Move:: Enter to moving state
+2259::  Root:Offensive:Travel:: Target setted
+2259::  Root:Offensive:Travel:Move:: Mover stop
+2259::  Root:Offensive:Travel:: Target setter disconnect
+2259::  Root:Offensive:Travel -> Root:Offensive:Combat
+2259::  Root:Offensive:Combat:: Target lost connected
+2259::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+2259::  EnemyTargeter: tareget set
+2259::  AllyTargeter: tareget set
+2287::  EnemyTargeter: tareget set
+2316::  EnemyTargeter: tareget set
+2324::  EnemyTargeter: tareget set
+2324::  Root:Offensive:Combat:RangedChase:: Mover Stop
+2324::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+2324::  Swing timer started
+2352::  Swing timer stoped
+2352::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+2352::  Attack timer started
+2484::  AllyTargeter: tareget die
+2484::  EnemyTargeter: tareget die
+2484::  Root:Offensive:Combat:: Target lost
+2484::  Attack timer stoped
+2484::  Root:Offensive:Combat:: Target lost disconnected
+2484::  Root:Offensive:Combat -> Root:Offensive:Travel
+2484::  Root:Offensive:Travel:: Target setter connect
+2484::  Root:Offensive:Travel:Move:: Set nv to current target pos
+2484::  Root:Offensive:Travel:Move:: Enter to moving state
+2564::  Root:Offensive:Travel:: Target setted
+2564::  Root:Offensive:Travel:Move:: Mover stop
+2564::  Root:Offensive:Travel:: Target setter disconnect
+2564::  Root:Offensive:Travel -> Root:Offensive:Combat
+2564::  Root:Offensive:Combat:: Target lost connected
+2564::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+2564::  EnemyTargeter: tareget set
+2564::  AllyTargeter: tareget set
+2592::  EnemyTargeter: tareget set
+2621::  EnemyTargeter: tareget set
+2650::  EnemyTargeter: tareget set
+2667::  EnemyTargeter: tareget set
+2667::  Root:Offensive:Combat:RangedChase:: Mover Stop
+2667::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+2667::  Swing timer started
+2695::  Swing timer stoped
+2695::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+2695::  Attack timer started
+2840::  Attack timer stoped
+2840::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+2840::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+2842::  EnemyTargeter: tareget set
+2842::  Root:Offensive:Combat:RangedChase:: Mover Stop
+2842::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+2842::  Swing timer started
+2870::  Swing timer stoped
+2870::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+2870::  Attack timer started
+2953::  EnemyTargeter: tareget die
+2953::  EnemyTargeter: tareget set
+3015::  Attack timer stoped
+3015::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+3015::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+3017::  EnemyTargeter: tareget set
+3017::  Root:Offensive:Combat:RangedChase:: Mover Stop
+3017::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+3017::  Swing timer started
+3035::  EnemyTargeter: tareget die
+3035::  EnemyTargeter: tareget set
+3045::  Swing timer stoped
+3045::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+3045::  Attack timer started
+3190::  Attack timer stoped
+3190::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+3190::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+3219::  EnemyTargeter: tareget set
+3248::  EnemyTargeter: tareget set
+3255::  EnemyTargeter: tareget set
+3255::  Root:Offensive:Combat:RangedChase:: Mover Stop
+3255::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+3255::  Swing timer started
+3283::  Swing timer stoped
+3283::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+3283::  Attack timer started
+3428::  Attack timer stoped
+3428::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+3428::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+3430::  EnemyTargeter: tareget set
+3430::  Root:Offensive:Combat:RangedChase:: Mover Stop
+3430::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+3430::  Swing timer started
+3458::  Swing timer stoped
+3458::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+3458::  Attack timer started
+3603::  Attack timer stoped
+3603::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+3603::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+3632::  EnemyTargeter: tareget set
+3649::  EnemyTargeter: tareget set
+3649::  Root:Offensive:Combat:RangedChase:: Mover Stop
+3649::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+3649::  Swing timer started
+3677::  Swing timer stoped
+3677::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+3677::  Attack timer started
+3802::  EnemyTargeter: tareget die
+3802::  EnemyTargeter: tareget set
+3822::  Attack timer stoped
+3822::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+3822::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+3851::  EnemyTargeter: tareget set
+3880::  EnemyTargeter: tareget set
+3909::  EnemyTargeter: tareget set
+3934::  EnemyTargeter: tareget set
+3934::  Root:Offensive:Combat:RangedChase:: Mover Stop
+3934::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+3934::  Swing timer started
+3962::  Swing timer stoped
+3962::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+3962::  Attack timer started
+4059::  EnemyTargeter: tareget die
+4059::  EnemyTargeter: tareget set
+4107::  Attack timer stoped
+4107::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+4107::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+4109::  EnemyTargeter: tareget set
+4109::  Root:Offensive:Combat:RangedChase:: Mover Stop
+4109::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+4109::  Swing timer started
+4137::  Swing timer stoped
+4137::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+4137::  Attack timer started
+4282::  Attack timer stoped
+4282::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+4282::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+4311::  EnemyTargeter: tareget set
+4340::  EnemyTargeter: tareget set
+4352::  EnemyTargeter: tareget set
+4352::  Root:Offensive:Combat:RangedChase:: Mover Stop
+4352::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+4352::  Swing timer started
+4361::  AllyTargeter: tareget set
+4380::  Swing timer stoped
+4380::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+4380::  Attack timer started
+4460::  EnemyTargeter: tareget die
+4460::  EnemyTargeter: tareget set
+4460::  AllyTargeter: tareget die
+4460::  AllyTargeter: tareget set
+4525::  Attack timer stoped
+4525::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+4525::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+4527::  EnemyTargeter: tareget set
+4527::  Root:Offensive:Combat:RangedChase:: Mover Stop
+4527::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+4527::  Swing timer started
+4555::  Swing timer stoped
+4555::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+4555::  Attack timer started
+4563::  AllyTargeter: tareget die
+4563::  AllyTargeter: tareget set
+4563::  EnemyTargeter: tareget die
+4563::  EnemyTargeter: tareget set
+4645::  AllyTargeter: tareget die
+4645::  AllyTargeter: tareget set
+4645::  EnemyTargeter: tareget die
+4645::  EnemyTargeter: tareget set
+4700::  Attack timer stoped
+4700::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+4700::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+4707::  EnemyTargeter: tareget set
+4707::  Root:Offensive:Combat:RangedChase:: Mover Stop
+4707::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+4707::  Swing timer started
+4735::  Swing timer stoped
+4735::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+4735::  Attack timer started
+4769::  AllyTargeter: tareget set
+4865::  EnemyTargeter: tareget die
+4865::  EnemyTargeter: tareget set
+4865::  AllyTargeter: tareget die
+4865::  AllyTargeter: tareget set
+4880::  Attack timer stoped
+4880::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+4880::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+4882::  EnemyTargeter: tareget set
+4882::  Root:Offensive:Combat:RangedChase:: Mover Stop
+4882::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+4882::  Swing timer started
+4910::  Swing timer stoped
+4910::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+4910::  Attack timer started
+5055::  Attack timer stoped
+5055::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+5055::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+5055::  EnemyTargeter: tareget die
+5055::  EnemyTargeter: tareget set
+5057::  EnemyTargeter: tareget set
+5057::  Root:Offensive:Combat:RangedChase:: Mover Stop
+5057::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+5057::  Swing timer started
+5085::  Swing timer stoped
+5085::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+5085::  Attack timer started
+5230::  Attack timer stoped
+5230::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+5230::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+5259::  EnemyTargeter: tareget set
+5288::  EnemyTargeter: tareget set
+5300::  EnemyTargeter: tareget set
+5300::  Root:Offensive:Combat:RangedChase:: Mover Stop
+5300::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+5300::  Swing timer started
+5328::  Swing timer stoped
+5328::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+5328::  Attack timer started
+5348::  EnemyTargeter: tareget die
+5348::  EnemyTargeter: tareget set
+5473::  Attack timer stoped
+5473::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+5473::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+5502::  EnemyTargeter: tareget set
+5504::  EnemyTargeter: tareget set
+5504::  Root:Offensive:Combat:RangedChase:: Mover Stop
+5504::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+5504::  Swing timer started
+5532::  Swing timer stoped
+5532::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+5532::  Attack timer started
+5617::  EnemyTargeter: tareget die
+5617::  EnemyTargeter: tareget set
+5677::  Attack timer stoped
+5677::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+5677::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+5706::  EnemyTargeter: tareget set
+5735::  EnemyTargeter: tareget set
+5764::  EnemyTargeter: tareget set
+5768::  EnemyTargeter: tareget set
+5768::  Root:Offensive:Combat:RangedChase:: Mover Stop
+5768::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+5768::  Swing timer started
+5796::  Swing timer stoped
+5796::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+5796::  Attack timer started
+5938::  Attack timer stoped
+5938::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+5938::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+5945::  EnemyTargeter: tareget set
+5945::  Root:Offensive:Combat:RangedChase:: Mover Stop
+5945::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+5945::  Swing timer started
+5973::  Swing timer stoped
+5973::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+5973::  Attack timer started
+6118::  Attack timer stoped
+6118::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+6118::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+6120::  EnemyTargeter: tareget die
+6120::  EnemyTargeter: tareget set
+6122::  EnemyTargeter: tareget set
+6122::  Root:Offensive:Combat:RangedChase:: Mover Stop
+6122::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+6122::  Swing timer started
+6150::  Swing timer stoped
+6150::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+6150::  Attack timer started
+6235::  EnemyTargeter: tareget set
+6295::  Attack timer stoped
+6295::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+6295::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+6299::  AllyTargeter: tareget die
+6299::  AllyTargeter: tareget set
+6300::  Root:Offensive:Combat:: Target lost
+6300::  Root:Offensive:Combat:RangedChase:: Mover Stop
+6300::  Root:Offensive:Combat:: Target lost disconnected
+6300::  Root:Offensive:Combat -> Root:Offensive:Travel
+6300::  Root:Offensive:Travel:: Target setter connect
+6300::  Root:Offensive:Travel:Move:: Set nv to current target pos
+6300::  Root:Offensive:Travel:Move:: Enter to moving state
+6319::  Root:Offensive:Travel:: Target setted
+6319::  Root:Offensive:Travel:Move:: Mover stop
+6319::  Root:Offensive:Travel:: Target setter disconnect
+6319::  Root:Offensive:Travel -> Root:Offensive:Combat
+6319::  Root:Offensive:Combat:: Target lost connected
+6319::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+6319::  EnemyTargeter: tareget set
+6319::  AllyTargeter: tareget set
+6347::  EnemyTargeter: tareget set
+6376::  EnemyTargeter: tareget set
+6401::  EnemyTargeter: tareget set
+6401::  Root:Offensive:Combat:RangedChase:: Mover Stop
+6401::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+6401::  Swing timer started
+6429::  Swing timer stoped
+6429::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+6429::  Attack timer started
+6574::  Attack timer stoped
+6574::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+6574::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+6576::  EnemyTargeter: tareget set
+6576::  Root:Offensive:Combat:RangedChase:: Mover Stop
+6576::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+6576::  Swing timer started
+6604::  Swing timer stoped
+6604::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+6604::  Attack timer started
+6749::  Attack timer stoped
+6749::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+6749::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+6751::  EnemyTargeter: tareget set
+6751::  Root:Offensive:Combat:RangedChase:: Mover Stop
+6751::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+6751::  Swing timer started
+6779::  Swing timer stoped
+6779::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+6779::  Attack timer started
+6828::  EnemyTargeter: tareget die
+6828::  EnemyTargeter: tareget set
+6924::  Attack timer stoped
+6924::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+6924::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+6953::  EnemyTargeter: tareget set
+6982::  EnemyTargeter: tareget set
+6989::  EnemyTargeter: tareget set
+6989::  Root:Offensive:Combat:RangedChase:: Mover Stop
+6989::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+6989::  Swing timer started
+7017::  Swing timer stoped
+7017::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+7017::  Attack timer started
+7039::  AllyTargeter: tareget die
+7039::  AllyTargeter: tareget set
+7116::  EnemyTargeter: tareget die
+7116::  EnemyTargeter: tareget set
+7116::  AllyTargeter: tareget die
+7116::  AllyTargeter: tareget set
+7162::  Attack timer stoped
+7162::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+7162::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+7164::  EnemyTargeter: tareget set
+7164::  Root:Offensive:Combat:RangedChase:: Mover Stop
+7164::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+7164::  Swing timer started
+7192::  Swing timer stoped
+7192::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+7192::  Attack timer started
+7231::  AllyTargeter: tareget die
+7231::  AllyTargeter: tareget set
+7231::  EnemyTargeter: tareget die
+7231::  EnemyTargeter: tareget set
+7337::  Attack timer stoped
+7337::  Root:Offensive:Combat:Attack -> Root:Offensive:Combat:RangedChase
+7337::  Root:Offensive:Combat:RangedChase:: Enter to moving state
+7339::  EnemyTargeter: tareget set
+7339::  Root:Offensive:Combat:RangedChase:: Mover Stop
+7339::  Root:Offensive:Combat:RangedChase -> Root:Offensive:Combat:Swing
+7339::  Swing timer started
+7367::  Swing timer stoped
+7367::  Root:Offensive:Combat:Swing -> Root:Offensive:Combat:Attack
+7367::  Attack timer started
+7397::  AllyTargeter: tareget die
+7397::  EnemyTargeter: tareget die
+7397::  Root:Offensive:Combat:: Target lost
+7397::  Attack timer stoped
+7397::  Root:Offensive:Combat:: Target lost disconnected
+7397::  Root:Offensive:Combat -> Root:Offensive:Travel
+7397::  Root:Offensive:Travel:: Target setter connect
+7397::  Root:Offensive:Travel:Move:: Set nv to current target pos
+7397::  Root:Offensive:Travel:Move:: Enter to moving state
+7694::  Root:Offensive:Travel:Move:: Mover stop
+7694::  Root:Offensive:Travel:Move -> Root:Offensive:Travel:Idle

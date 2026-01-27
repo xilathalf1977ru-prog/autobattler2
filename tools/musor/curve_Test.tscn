@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://5gih4ob0mkrg"]
+
+[ext_resource type="Script" uid="uid://b3wi0bktonpv1" path="res://tools/musor/curve_test.gd" id="1_2rx3m"]
+[ext_resource type="Script" uid="uid://c1xycqdg4k5up" path="res://game_actors/skills/skill_scenes/bezie.gd" id="2_uaixl"]
+
+[sub_resource type="Resource" id="Resource_uaixl"]
+script = ExtResource("2_uaixl")
+p1 = Vector2(55.5, -24.37407)
+p2 = Vector2(111, 102)
+pts = PackedVector2Array(0, 0, 7.4, -2.5798843, 14.8, -3.8197846, 22.2, -3.7197022, 29.6, -2.279636, 37, 0.50041294, 44.4, 4.620447, 51.8, 10.080462, 59.2, 16.880463, 66.600006, 25.020449, 74, 34.500412, 81.4, 45.320362, 88.8, 57.480297, 96.2, 70.98022, 103.6, 85.820114, 111, 102)
+
+[node name="CurveTest" type="Node2D"]
+script = ExtResource("1_2rx3m")
+bezier = SubResource("Resource_uaixl")
+
+[node name="P" type="Marker2D" parent="."]
+position = Vector2(111, 102)

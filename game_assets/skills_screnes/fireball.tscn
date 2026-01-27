@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl3dclf2et8qa"]
+
+[ext_resource type="Script" uid="uid://dg8bpxoshnqy2" path="res://game_actors/skills/skill_scenes/curve_projectile.gd" id="1_docl7"]
+
+[sub_resource type="Curve" id="Curve_avnbb"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_bwbqt"]
+colors = PackedColorArray(1, 1, 0.3647059, 1, 0.62352943, 0, 0, 1)
+
+[node name="Fireball" type="Node2D"]
+z_index = 2
+script = ExtResource("1_docl7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.5
+offset_top = -6.5
+offset_right = 8.5
+offset_bottom = 6.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.40784314, 0, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 32
+lifetime = 0.27
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_avnbb")
+color = Color(1, 1, 0, 1)
+color_ramp = SubResource("Gradient_bwbqt")

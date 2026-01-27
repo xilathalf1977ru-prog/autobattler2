@@ -1,0 +1,84 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsohp8dyryit5"]
+
+[sub_resource type="GDScript" id="GDScript_2pive"]
+script/source = "extends PanelContainer
+
+func _process(_delta: float) -> void:
+	$\"1/VBoxContainer2/FPS\".text = str(Performance.get_monitor(Performance.TIME_FPS)).pad_decimals(5)
+	$\"1/VBoxContainer2/DRAW\".text = str(Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME))
+	$\"1/VBoxContainer2/MEM\".text = str(Performance.get_monitor(Performance.MEMORY_STATIC)/(1024*1024)).pad_decimals(2)
+	$\"1/VBoxContainer2/OBJS\".text = str(Performance.get_monitor(Performance.OBJECT_COUNT))
+	$\"1/VBoxContainer2/PROC\".text = str(Performance.get_monitor(Performance.TIME_PROCESS)*1000).pad_decimals(4)
+	$\"1/VBoxContainer2/PHYS\".text = str(Performance.get_monitor(Performance.TIME_PHYSICS_PROCESS)*1000).pad_decimals(4)
+	$\"1/VBoxContainer2/NAV\".text = str(Performance.get_monitor(Performance.TIME_NAVIGATION_PROCESS)*1000).pad_decimals(4)
+"
+
+[node name="DBG" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_2pive")
+
+[node name="1" type="HSplitContainer" parent="."]
+layout_mode = 2
+
+[node name="1" type="VBoxContainer" parent="1"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="1/1"]
+layout_mode = 2
+text = "FPS"
+
+[node name="Label2" type="Label" parent="1/1"]
+layout_mode = 2
+text = "DRAW_CALLS"
+
+[node name="Label3" type="Label" parent="1/1"]
+layout_mode = 2
+text = "MEM"
+
+[node name="Label7" type="Label" parent="1/1"]
+layout_mode = 2
+text = "OBJS"
+
+[node name="Label4" type="Label" parent="1/1"]
+layout_mode = 2
+text = "PROCESS"
+
+[node name="Label6" type="Label" parent="1/1"]
+layout_mode = 2
+text = "PHYS"
+
+[node name="Label8" type="Label" parent="1/1"]
+layout_mode = 2
+text = "NAV"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="1"]
+layout_mode = 2
+
+[node name="FPS" type="Label" parent="1/VBoxContainer2"]
+layout_mode = 2
+text = "FPS"
+
+[node name="DRAW" type="Label" parent="1/VBoxContainer2"]
+layout_mode = 2
+text = "DRAW_CALLS"
+
+[node name="MEM" type="Label" parent="1/VBoxContainer2"]
+layout_mode = 2
+text = "MEM"
+
+[node name="OBJS" type="Label" parent="1/VBoxContainer2"]
+layout_mode = 2
+text = "MEM"
+
+[node name="PROC" type="Label" parent="1/VBoxContainer2"]
+layout_mode = 2
+text = "PROCESS"
+
+[node name="PHYS" type="Label" parent="1/VBoxContainer2"]
+layout_mode = 2
+text = "FPS"
+
+[node name="NAV" type="Label" parent="1/VBoxContainer2"]
+layout_mode = 2
+text = "NAV"

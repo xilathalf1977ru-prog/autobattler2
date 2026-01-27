@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://cv6i8iu8vsoq1"]
+
+[ext_resource type="Script" uid="uid://ccvp2v8hvx2g7" path="res://game_actors/caster.gd" id="1_74hin"]
+[ext_resource type="Script" uid="uid://dcq7axq6kl5x5" path="res://game_actors/components/visual/visual.gd" id="2_21y7w"]
+[ext_resource type="Texture2D" uid="uid://diwp5la6l8tlw" path="res://assets/hom.png" id="3_8dfxi"]
+[ext_resource type="Script" uid="uid://drpew7sr0i7k7" path="res://game_actors/components/spell_handler.gd" id="3_he7ud"]
+[ext_resource type="Script" uid="uid://b3g7vr3moqttj" path="res://game_actors/components/buff_handler.gd" id="4_4kuu0"]
+[ext_resource type="Script" uid="uid://c3di4enlobrs8" path="res://game_actors/components/sound_comp.gd" id="5_8dfxi"]
+[ext_resource type="Script" uid="uid://bvhargvanjo5s" path="res://game_actors/components/ai/reactive_self_ai.gd" id="6_21y7w"]
+[ext_resource type="Script" uid="uid://d24frhg7d8bhj" path="res://game_actors/gui/build_gui.gd" id="7_4kuu0"]
+[ext_resource type="PackedScene" uid="uid://drkd71rmgtlws" path="res://game_actors/gui/hp_bar.tscn" id="8_8dfxi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dkvxq"]
+
+[node name="Barrack" type="CharacterBody2D" node_paths=PackedStringArray("cast_point", "buff_handler", "sound", "visual")]
+input_pickable = true
+script = ExtResource("1_74hin")
+cast_point = NodePath(".")
+buff_handler = NodePath("BuffHandler")
+sound = NodePath("SoundComp")
+visual = NodePath("VisualComp")
+metadata/_custom_type_script = "uid://ccvp2v8hvx2g7"
+
+[node name="Cs" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dkvxq")
+
+[node name="VisualComp" type="Node2D" parent="." node_paths=PackedStringArray("cast_point")]
+script = ExtResource("2_21y7w")
+cast_point = NodePath("..")
+metadata/_custom_type_script = "uid://dcq7axq6kl5x5"
+
+[node name="Sprite2D" type="Sprite2D" parent="VisualComp"]
+texture = ExtResource("3_8dfxi")
+centered = false
+offset = Vector2(-51, -175)
+
+[node name="SpellsHandler" type="Node" parent="." node_paths=PackedStringArray("unit")]
+script = ExtResource("3_he7ud")
+unit = NodePath("..")
+metadata/_custom_type_script = "uid://drpew7sr0i7k7"
+
+[node name="BuffHandler" type="Timer" parent="." node_paths=PackedStringArray("unit")]
+script = ExtResource("4_4kuu0")
+unit = NodePath("..")
+metadata/_custom_type_script = "uid://b3g7vr3moqttj"
+
+[node name="SoundComp" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource("5_8dfxi")
+metadata/_custom_type_script = "uid://c3di4enlobrs8"
+
+[node name="ReactiveSelfAI" type="Timer" parent="." node_paths=PackedStringArray("caster", "spells")]
+script = ExtResource("6_21y7w")
+caster = NodePath("..")
+spells = NodePath("../SpellsHandler")
+metadata/_custom_type_script = "uid://bvhargvanjo5s"
+
+[node name="GUI" type="Node2D" parent="." node_paths=PackedStringArray("build", "hp_bar", "spells")]
+script = ExtResource("7_4kuu0")
+build = NodePath("..")
+hp_bar = NodePath("HpBar")
+spells = NodePath("../SpellsHandler")
+metadata/_custom_type_script = "uid://d24frhg7d8bhj"
+
+[node name="HpBar" parent="GUI" instance=ExtResource("8_8dfxi")]
+offset_left = -25.0
+offset_top = -182.0
+offset_right = 81.0
+offset_bottom = -180.0

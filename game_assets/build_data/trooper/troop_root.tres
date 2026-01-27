@@ -1,0 +1,108 @@
+[gd_resource type="Resource" script_class="Root" load_steps=35 format=3 uid="uid://c45jjf5g5cf0d"]
+
+[ext_resource type="Script" uid="uid://b4m8en5a83c0l" path="res://game_actors/fsm/state.gd" id="1_62m6b"]
+[ext_resource type="Script" uid="uid://csfpu7hhjcpsr" path="res://game_actors/fsm/states/chase.gd" id="2_h20ny"]
+[ext_resource type="Script" uid="uid://ljkk7lvjqgaa" path="res://game_actors/fsm/hfsm/root_node.gd" id="2_kmi02"]
+[ext_resource type="Resource" uid="uid://4wa2ekuqmbw" path="res://assets/units/default/def_chase.tres" id="3_bmfg8"]
+[ext_resource type="Script" uid="uid://gfeij8146hvu" path="res://game_actors/fsm/states/swing.gd" id="3_mklfb"]
+[ext_resource type="Script" uid="uid://ed8ls8ixvgl" path="res://game_actors/fsm/states/attack.gd" id="4_0em5l"]
+[ext_resource type="Resource" uid="uid://fd4kial88k6k" path="res://assets/units/default/def_swing.tres" id="5_7nnva"]
+[ext_resource type="Script" uid="uid://bb4pvywqlqxpd" path="res://game_actors/fsm/states/cast.gd" id="5_bgfre"]
+[ext_resource type="Script" uid="uid://ce5kiyt27krs0" path="res://game_actors/fsm/hfsm/combat_node.gd" id="6_yqxml"]
+[ext_resource type="Resource" uid="uid://dkxfka7do5a2a" path="res://assets/units/default/def_attack.tres" id="7_2rg1k"]
+[ext_resource type="Script" uid="uid://dtarjb3ipqchs" path="res://game_actors/fsm/states/idle.gd" id="7_qg4wj"]
+[ext_resource type="Script" uid="uid://dhngvvkemgpyq" path="res://game_actors/fsm/states/move.gd" id="8_bmfg8"]
+[ext_resource type="Resource" uid="uid://23o4fs0wald5" path="res://assets/units/default/def_cast.tres" id="9_7ix6l"]
+[ext_resource type="Script" uid="uid://c51ss8vatgmc8" path="res://game_actors/fsm/hfsm/retreat_node.gd" id="9_7nnva"]
+[ext_resource type="Script" uid="uid://42clr85q46e" path="res://game_actors/fsm/hfsm/offfensive_node.gd" id="10_2rg1k"]
+[ext_resource type="Script" uid="uid://bi00tsiv15smh" path="res://game_actors/fsm/states/dying.gd" id="11_7ix6l"]
+[ext_resource type="Resource" uid="uid://bqpxuv8kn8ri0" path="res://assets/units/default/def_move.tres" id="13_eddgs"]
+[ext_resource type="Script" uid="uid://rwauchcnlg3i" path="res://game_actors/fsm/hfsm/travel_node.gd" id="14_n07rr"]
+[ext_resource type="Script" uid="uid://d2km05mxcm56e" path="res://game_actors/fsm/state_visual_data.gd" id="18_orw86"]
+
+[sub_resource type="Resource" id="Resource_eddgs"]
+script = ExtResource("2_h20ny")
+speed = 120.0
+visual_data = ExtResource("3_bmfg8")
+metadata/_custom_type_script = "uid://csfpu7hhjcpsr"
+
+[sub_resource type="Resource" id="Resource_n07rr"]
+script = ExtResource("3_mklfb")
+lock_time = 0.3
+visual_data = ExtResource("5_7nnva")
+metadata/_custom_type_script = "uid://gfeij8146hvu"
+
+[sub_resource type="Resource" id="Resource_bhmhl"]
+script = ExtResource("4_0em5l")
+lock_time = 1.0
+visual_data = ExtResource("7_2rg1k")
+metadata/_custom_type_script = "uid://ed8ls8ixvgl"
+
+[sub_resource type="Resource" id="Resource_whial"]
+script = ExtResource("5_bgfre")
+visual_data = ExtResource("9_7ix6l")
+metadata/_custom_type_script = "uid://bb4pvywqlqxpd"
+
+[sub_resource type="Resource" id="Resource_0yjib"]
+script = ExtResource("6_yqxml")
+default_state = 2
+__build_states = Array[ExtResource("1_62m6b")]([SubResource("Resource_eddgs"), SubResource("Resource_n07rr"), SubResource("Resource_bhmhl"), SubResource("Resource_whial")])
+metadata/_custom_type_script = "uid://ce5kiyt27krs0"
+
+[sub_resource type="Resource" id="Resource_nrhkd"]
+script = ExtResource("7_qg4wj")
+visual_data = ExtResource("9_7ix6l")
+metadata/_custom_type_script = "uid://dtarjb3ipqchs"
+
+[sub_resource type="Resource" id="Resource_1k6w5"]
+script = ExtResource("8_bmfg8")
+speed = 150.0
+visual_data = ExtResource("13_eddgs")
+metadata/_custom_type_script = "uid://dhngvvkemgpyq"
+
+[sub_resource type="Resource" id="Resource_n57ix"]
+script = ExtResource("14_n07rr")
+default_state = 1
+__build_states = Array[ExtResource("1_62m6b")]([SubResource("Resource_nrhkd"), SubResource("Resource_1k6w5")])
+metadata/_custom_type_script = "uid://rwauchcnlg3i"
+
+[sub_resource type="Resource" id="Resource_eqqme"]
+script = ExtResource("10_2rg1k")
+default_state = 9
+__build_states = Array[ExtResource("1_62m6b")]([SubResource("Resource_0yjib"), SubResource("Resource_n57ix")])
+metadata/_custom_type_script = "uid://42clr85q46e"
+
+[sub_resource type="Resource" id="Resource_35v5i"]
+script = ExtResource("8_bmfg8")
+speed = 160.0
+visual_data = ExtResource("13_eddgs")
+metadata/_custom_type_script = "uid://dhngvvkemgpyq"
+
+[sub_resource type="Resource" id="Resource_8xt8m"]
+script = ExtResource("7_qg4wj")
+visual_data = ExtResource("9_7ix6l")
+metadata/_custom_type_script = "uid://dtarjb3ipqchs"
+
+[sub_resource type="Resource" id="Resource_0oxpt"]
+script = ExtResource("9_7nnva")
+default_state = 1
+__build_states = Array[ExtResource("1_62m6b")]([SubResource("Resource_35v5i"), SubResource("Resource_8xt8m")])
+metadata/_custom_type_script = "uid://c51ss8vatgmc8"
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_81kvk"]
+
+[sub_resource type="Resource" id="Resource_nc27o"]
+script = ExtResource("18_orw86")
+texture = SubResource("PlaceholderTexture2D_81kvk")
+metadata/_custom_type_script = "uid://d2km05mxcm56e"
+
+[sub_resource type="Resource" id="Resource_t6xfx"]
+script = ExtResource("11_7ix6l")
+visual_data = SubResource("Resource_nc27o")
+metadata/_custom_type_script = "uid://bi00tsiv15smh"
+
+[resource]
+script = ExtResource("2_kmi02")
+default_state = 6
+__build_states = Array[ExtResource("1_62m6b")]([SubResource("Resource_eqqme"), SubResource("Resource_0oxpt"), SubResource("Resource_t6xfx")])
+metadata/_custom_type_script = "uid://ljkk7lvjqgaa"

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=8 format=3 uid="uid://ciqexahlfxxxw"]
+
+[ext_resource type="Script" uid="uid://igl5wr5jn8qh" path="res://game_actors/skills/spell.gd" id="1_0pq7g"]
+[ext_resource type="Script" uid="uid://csihjt1coune8" path="res://game_actors/skills/pr_skill.gd" id="1_qohiw"]
+[ext_resource type="PackedScene" uid="uid://qfax3quedeg8" path="res://game_assets/skills_screnes/heal.tscn" id="2_xu4ex"]
+[ext_resource type="Script" uid="uid://xlrjfirdp2ey" path="res://game_actors/skills/effect.gd" id="3_3qgbl"]
+[ext_resource type="Script" uid="uid://m7f22dj513mf" path="res://game_actors/skills/effects/heal_effect.gd" id="4_xu4ex"]
+
+[sub_resource type="Resource" id="Resource_3qgbl"]
+script = ExtResource("4_xu4ex")
+val = 3.0
+metadata/_custom_type_script = "uid://m7f22dj513mf"
+
+[sub_resource type="Resource" id="Resource_aideb"]
+script = ExtResource("1_qohiw")
+skill_scene = ExtResource("2_xu4ex")
+target_effects = Array[ExtResource("3_3qgbl")]([SubResource("Resource_3qgbl")])
+metadata/_custom_type_script = "uid://csihjt1coune8"
+
+[resource]
+script = ExtResource("1_0pq7g")
+nom = "Heal"
+cd = 6.0
+cast_range = 300.0
+_skill = SubResource("Resource_aideb")
+meta = PackedStringArray("for ally")
+metadata/_custom_type_script = "uid://igl5wr5jn8qh"

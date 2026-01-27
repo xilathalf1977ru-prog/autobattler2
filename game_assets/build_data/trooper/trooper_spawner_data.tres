@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="UnitSpawnerData" load_steps=13 format=3 uid="uid://dnytnvjyhw1qt"]
+
+[ext_resource type="Resource" uid="uid://utc801rv3t0r" path="res://game_assets/skill_reses/base_skills/attack_skill.tres" id="1_3oqe1"]
+[ext_resource type="Script" uid="uid://igl5wr5jn8qh" path="res://game_actors/skills/spell.gd" id="2_764py"]
+[ext_resource type="Resource" uid="uid://c45jjf5g5cf0d" path="res://game_assets/build_data/trooper/troop_root.tres" id="4_eio76"]
+[ext_resource type="Script" uid="uid://dkkv0j813bw5j" path="res://spawner/spawner_data.gd" id="5_chyi2"]
+[ext_resource type="Script" uid="uid://dl08bt5502t8h" path="res://game_actors/components/resourse_components/sound_data.gd" id="6_6onvp"]
+[ext_resource type="Texture2D" uid="uid://cx50a5d7tpcg4" path="res://assets/units/default/def_swing.png" id="7_lx3je"]
+[ext_resource type="AudioStream" uid="uid://kfxyui73prqy" path="res://assets/sound/meat_hit.wav" id="7_m65yl"]
+[ext_resource type="AudioStream" uid="uid://dsrp277t04mu" path="res://assets/sound/makak_ow.mp3" id="8_hdqm1"]
+
+[sub_resource type="Resource" id="Resource_yvuxn"]
+script = ExtResource("6_6onvp")
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[sub_resource type="Resource" id="Resource_hdqm1"]
+script = ExtResource("6_6onvp")
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[sub_resource type="Resource" id="Resource_4vobu"]
+script = ExtResource("6_6onvp")
+sounds = Array[AudioStream]([ExtResource("7_m65yl")])
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[sub_resource type="Resource" id="Resource_xaqr1"]
+script = ExtResource("6_6onvp")
+is_forced = true
+sounds = Array[AudioStream]([ExtResource("8_hdqm1")])
+metadata/_custom_type_script = "uid://dl08bt5502t8h"
+
+[resource]
+script = ExtResource("5_chyi2")
+nom = "Trooper"
+spawner_texture = ExtResource("7_lx3je")
+max_hp = 45.0
+sound_data = Dictionary[int, ExtResource("6_6onvp")]({
+0: SubResource("Resource_yvuxn"),
+1: SubResource("Resource_hdqm1"),
+2: SubResource("Resource_4vobu"),
+3: SubResource("Resource_xaqr1")
+})
+is_melee_tank = true
+vision = 300.0
+fsm_root = ExtResource("4_eio76")
+attack = ExtResource("1_3oqe1")
+attack_range = 50.0
+max_rang = 6
+metadata/_custom_type_script = "uid://dkkv0j813bw5j"

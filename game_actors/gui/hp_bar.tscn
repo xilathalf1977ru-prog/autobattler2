@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://drkd71rmgtlws"]
+
+[ext_resource type="Script" uid="uid://dbfbren8yfklh" path="res://game_actors/gui/property_bar.gd" id="1_qyha7"]
+
+[node name="HpBar" type="ColorRect"]
+custom_minimum_size = Vector2(0, 2)
+offset_right = 16.0
+offset_bottom = 1.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+color = Color(0.7048701, 0.68477726, 0.5565171, 1)
+script = ExtResource("1_qyha7")
+_max_val = 100.0
+
+[node name="Tmp" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 2.0
+
+[node name="Val" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 2.0
+color = Color(0, 1, 0.133, 1)

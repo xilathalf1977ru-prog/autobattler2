@@ -3,7 +3,7 @@
 @abstract
 extends Sprite2D
 class_name Spawner
-
+##TEST___TEST___TEST
 static var frac_colors:Dictionary[int,Color] = {
 	0:Color.RED,
 	1:Color.BLUE,
